@@ -1,0 +1,24 @@
+*precharge circuit
+
+.include PMOS-180nm.lib
+m1 bl pre vdd  vdd  CMOSP W=0.36u L=0.18u M=1
+m3 br pre vdd vdd CMOSP W=0.36u L=0.18u M=1
+m2 br pre bl gnd CMOSN W=0.36u L=0.18u M=1
+C1 bl gnd 20fF
+C2 br gnd 20fF
+v1  vdd gnd 1.8v
+
+
+ v2  pre gnd pulse(0 1.8V 50ps 10ps 10ps 40ns 80ns)
+.tran 10e-09 100e-09 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+
+plot v(pre)
+plot v(bl) v(br)
+.endc
+.end
