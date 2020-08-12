@@ -1,6 +1,6 @@
 # SRAM
 
-1024 X 32 SRAM IP Design 
+This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM compiler .
 
 
 # Table of contents
