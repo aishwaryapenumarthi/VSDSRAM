@@ -131,7 +131,7 @@ $ git clone https://github.com/aishwaryapenumarthi/SRAM.git
 $ cd SRAM/Spice_lib
 ```
 #### To Run Simulation 
-**Example :** To run simulations of trigate circut , type the below command 
+**Example :** To run simulations of trigate circuit , type the below command 
 ```
 $ ngspice tri_gate.cir.out
 ```
