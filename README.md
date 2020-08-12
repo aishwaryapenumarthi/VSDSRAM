@@ -2,17 +2,40 @@
 
 1024 X 32 SRAM IP Design 
 
-## Required Specifications:
+
+# Table of contents
+
+- [Required Specifications](#required-specifications)
+- [6T-CELL](#6t-cell)
+- [Modes of operation of sram](#modes-of-operation-of-sram)
+  - [**1. Hold mode :**](#1-hold-mode-)
+    - [SNM curve](#snm-curve)
+  - [**2. Read mode :**](#2-read-mode-)
+    - [Precharge circuit :](#precharge-circuit-)
+    - [Sense amplifier :](#sense-amplifier-)
+  - [**3. Write mode :**](#3-write-mode-)
+    - [Write Driver :](#write-driver-)
+- [IP usage](#ip-usage)
+  - [Ngspice for Simulation](#ngspice-for-simulation)
+  - [Steps to use Ngspice](#steps-to-use-ngspice)
+  - [For Simulation of this IP](#for-simulation-of-this-ip)
+    - [To Run Simulation](#to-run-simulation)
+- [Future work](#future-work)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
+- [Contact Information](#contact-information)
+
+## Required Specifications
 
  * Size : 4KB (1024 x 32)
  * Power Supply : 1.8V
  * Access time < 2.5ns 
  
-## 6T-CELL :
+## 6T-CELL 
 
 <img align="center" width="1000"  src="/Circuits/6tsramcell.png">
 
-## Modes of operation of sram :
+## Modes of operation of sram 
 
 ### **1. Hold mode :** 
 WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of two stable operating points . Therefore, data is held .
