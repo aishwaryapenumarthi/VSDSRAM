@@ -10,14 +10,14 @@
  
 ## 6T-CELL :
 
-<img align="center" width="500"  src="/Circuits/6tsramcell.png">
+<img align="center" width="1000"  src="/Circuits/6tsramcell.png">
 
 There are three moode of operation of sram:
 
  **1. Hold mode :** WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of two stable operating points.Therefore, data is held.
 ### SNM curve 
 
-<img align="center" width="500"  src="/Waveforms/SNM_CURVE.png">
+<img align="center" width="1000"  src="/Waveforms/SNM_CURVE.png">
 
 Calculated SNM value for above curve is 0.59
 
@@ -29,22 +29,22 @@ Similarly read '0' operation is done.
 Note : Condition for cell stability in read operation  is Kpdn > Kaccess  i.e CR (CELL RATIO) should be grater than 1
 
 ### Precharge circuit :
-<img align="center" width="500"  src="/Circuits/precharge.png">
+<img align="center" width="1000"  src="/Circuits/precharge.png">
 
 Simulated waveform :
 
-<img align="center" width="500"  src="/Waveforms/precharge_circuit(pre,bl.br).png">
+<img align="center" width="1000"  src="/Waveforms/precharge_circuit(pre,bl.br).png">
 
 ### Sense amplifier :  
 
 Here sen is active-0 read enable signal
 
-<img align="center" width="500"  src="/Circuits/sense_amp.png">
+<img align="center" width="1000"  src="/Circuits/sense_amp.png">
 
 Simulated waveforms :
 
-<img align="center" width="500"  src="/Waveforms/sense_inputs.png">
-<img align="center" width="500"  src="/Waveforms/sense_out.png">
+<img align="center" width="1000"  src="/Waveforms/sense_inputs.png">
+<img align="center" width="1000"  src="/Waveforms/sense_out.png">
 
 **3. Write mode :** WL=1 ==> Aceess transistors will be on.
 Write '0 ': Initially Q=1 and Q = 0. Here BL is forced to 0 and this causes M4 and M6 transistors conduct.
@@ -55,13 +55,13 @@ That i.e write operation is done by forcing bitlines bl and br , which is done u
 
 Here we is active-0 write enable signal
 
-<img align="center" width="500"  src="/Circuits/writedrivers_schematic.png">
+<img align="center" width="1000"  src="/Circuits/writedrivers_schematic.png">
 
 Simulated waveforms:
 
-<img align="center" width="500"  src="/Waveforms/writedriver_inputs.png">
-<img align="center" width="500"  src="/Waveforms/writedriver_out_bl.png">
-<img align="center" width="500"  src="/Waveforms/writedriver_output_br.png">
+<img align="center" width="1000"  src="/Waveforms/writedriver_inputs.png">
+<img align="center" width="1000"  src="/Waveforms/writedriver_out_bl.png">
+<img align="center" width="1000"  src="/Waveforms/writedriver_output_br.png">
 
 ## IP usage 
 The user of this IP has to install Ngspice (Open source Circuit Simulator)
@@ -110,19 +110,24 @@ $ ngspice tri_gate.cir.out
 ```
 Which gives you following waveforms :
 
-<img align="center" width="500"  src="/Waveforms/trigate_inputs.png">
-<img align="center" width="500"  src="/Waveforms/trigate_output.png">
+<img align="center" width="1000"  src="/Waveforms/trigate_inputs.png">
+<img align="center" width="1000"  src="/Waveforms/trigate_output.png">
 
 ## Future Work 
 
 1.Magic layouts of above subcircuits are need to be done. 
+
 2.OpenRam compiler will be used for designing memory in future steps. For Openram compiler, spice netlist, magic files, and gds for each and every block (i.e subcircuit) must be provided .Therefore, .mag, .gds files of all subcircuits should be generated.
+
 3.The setup script and technology directory for osu018  has to be created . 
 
-## Contibutions
-    
-  * Penumarthi Aishwarya
-  * Kunalghosh Director VSD Corp.Pvt.ltd
+## Author
+
+ * Penumarthi Aishwarya
+ 
+## Acknowledgements
+
+  * Kunal Ghosh Director VSD Corp.Pvt.ltd
   * Philipp Guhring Software Architect at LibreSilicon Association
   
 ## Contact Information 
