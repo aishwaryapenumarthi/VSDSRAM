@@ -22,7 +22,7 @@ WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of tw
 
 Calculated SNM value for above curve is 0.59 .
 
-###**2. Read mode :**
+### **2. Read mode :**
 WL=1 ==> Aceess transistors will be on.
 For Read '1': Q = 1 and Q = 0 Bit lines are precharged to Vdd .In this operation M2 , M3 off . Voltage of BL bar starts decreasing. Both bitlines are connected to data
 read circuitry and small difference is detected and amplified as logic'1'.
@@ -48,7 +48,8 @@ Simulated waveforms :
 <img align="center" width="1000"  src="/Waveforms/sense_inputs.png">
 <img align="center" width="1000"  src="/Waveforms/sense_out.png">
 
-###**3. Write mode :** WL=1 ==> Aceess transistors will be on .
+### **3. Write mode :**
+WL=1 ==> Aceess transistors will be on .
 Write '0 ': Initially Q=1 and Q = 0. Here BL is forced to 0 and this causes M4 and M6 transistors conduct .
 When Q less than Vth of M1 then M1 gets off. Qb becomes high as PMOS(M2) connected toVdd will be ON and Q becomes low i.e logic'0'. That i.e write operation is done by forcing bitlines bl and br , which is done using write driver circuit .
 
