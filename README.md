@@ -5,31 +5,39 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
 
 # Table of contents
 
-- [Required Specifications](#required-specifications)
+- [Desired Specifications](#desired-specifications)
 - [6T-CELL](#6t-cell)
 - [Modes of operation of sram](#modes-of-operation-of-sram)
-  - [**1. Hold mode :**](#1-hold-mode-)
-    - [SNM curve](#snm-curve)
-  - [**2. Read mode :**](#2-read-mode-)
-    - [Precharge circuit :](#precharge-circuit-)
-    - [Sense amplifier :](#sense-amplifier-)
-  - [**3. Write mode :**](#3-write-mode-)
-    - [Write Driver :](#write-driver-)
+  * [**1. Hold mode :**](#--1-hold-mode----)
+    + [SNM curve](#snm-curve)
+  * [**2. Read mode :**](#--2-read-mode----)
+    + [Precharge circuit :](#precharge-circuit--)
+      - [Simulated waveforms :](#simulated-waveforms--)
+    + [Sense amplifier :](#sense-amplifier--)
+      - [Simulated waveforms :](#simulated-waveforms---1)
+  * [**3. Write mode :**](#--3-write-mode----)
+    + [Write Driver :](#write-driver--)
+      - [Simulated waveforms:](#simulated-waveforms-)
+- [Block diagram for for 1-bit SRAM](#block-diagram-for-for-1-bit-sram)
+  * [Simulated waveforms :](#simulated-waveforms---2)
 - [IP usage](#ip-usage)
-  - [Ngspice for Simulation](#ngspice-for-simulation)
-  - [Steps to use Ngspice](#steps-to-use-ngspice)
-  - [For Simulation of this IP](#for-simulation-of-this-ip)
-    - [To Run Simulation](#to-run-simulation)
+  * [Ngspice for Simulation](#ngspice-for-simulation)
+  * [Steps to use Ngspice](#steps-to-use-ngspice)
+  * [For Simulation of this IP](#for-simulation-of-this-ip)
+    + [To Run Simulation](#to-run-simulation)
 - [Future work](#future-work)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 - [Contact Information](#contact-information)
 
-## Required Specifications
+
+## Desired Specifications
 
  * Size : 4KB (1024 x 32)
  * Power Supply : 1.8V
  * Access time < 2.5ns 
+ 
+ For more details check [this](mem4kBytesor32kbitsSpec.pdf)
  
 ## 6T-CELL 
 
@@ -43,7 +51,7 @@ WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of tw
 
 <img align="center" width="1000"  src="/Waveforms/SNM_CURVE.png">
 
-Calculated SNM value for above curve is 0.59 .
+Calculated **SNM ** value for above curve is ** 0.59 .**
 
 ### **2. Read mode :**
 WL=1 ==> Aceess transistors will be on.
@@ -51,14 +59,15 @@ For Read '1': Q = 1 and Q = 0 Bit lines are precharged to Vdd .In this operation
 read circuitry and small difference is detected and amplified as logic'1'.
 Similarly read '0' operation is done .
 
-Note : Condition for cell stability in read operation  is Kpdn > Kaccess  i.e CR (CELL RATIO) should be grater than 1 .
+**Note**  : Condition for cell stability in read operation  is Kpdn > Kaccess  i.e CR (CELL RATIO) should be grater than 1 .
 
 #### Precharge circuit :
+
 <img align="center" width="1000"  src="/Circuits/precharge.png">
 
-Simulated waveform :
+##### Simulated waveforms :
 
-<img align="center" width="1000"  src="/Waveforms/precharge_circuit(pre,bl.br).png">
+<img align="center" width="1000"  src="/Waveforms/precharge_circuit(pre,bl,br).png">
 
 #### Sense amplifier :  
 
@@ -66,17 +75,17 @@ Here sen is active-0 read enable signal .
 
 <img align="center" width="1000"  src="/Circuits/sense_amp.png">
 
-Simulated waveforms :
+##### Simulated waveforms :
 
 <img align="center" width="1000"  src="/Waveforms/sense_inputs.png">
 <img align="center" width="1000"  src="/Waveforms/sense_out.png">
 
 ### **3. Write mode :**
-WL=1 ==> Aceess transistors will be on .
+WL=1 ==> Access transistors will be on .
 Write '0 ': Initially Q=1 and Q = 0. Here BL is forced to 0 and this causes M4 and M6 transistors conduct .
 When Q less than Vth of M1 then M1 gets off. Qb becomes high as PMOS(M2) connected toVdd will be ON and Q becomes low i.e logic'0'. That i.e write operation is done by forcing bitlines bl and br , which is done using write driver circuit .
 
-Note : Condition for cell write completion is Kaccess > Kpup . 
+**Note : Condition for cell write completion is Kaccess > Kpup . 
 
 #### Write Driver :
 
@@ -84,11 +93,21 @@ Here we is active-0 write enable signal .
 
 <img align="center" width="1000"  src="/Circuits/writedrivers_schematic.png">
 
-Simulated waveforms:
+##### Simulated waveforms:
 
 <img align="center" width="1000"  src="/Waveforms/writedriver_inputs.png">
 <img align="center" width="1000"  src="/Waveforms/writedriver_out_bl.png">
 <img align="center" width="1000"  src="/Waveforms/writedriver_output_br.png">
+
+
+## Block diagram for for 1-bit SRAM
+
+<img align="center" width="1000"  src="/Circuits/block diagram.JPG">
+
+### Simulated waveforms : 
+<img align="center" width="1000"  src="/Waveforms/Integrated_ckt.png">
+<img align="center" width="1000"  src="/Waveforms/bl,br_Integrated.pn
+
 
 ## IP usage 
 The user of this IP has to install Ngspice (Open source Circuit Simulator)
