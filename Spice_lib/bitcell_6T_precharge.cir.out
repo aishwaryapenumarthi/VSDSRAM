@@ -1,7 +1,6 @@
 *sram cell with percharge 
 
-.include NMOS-180nm.lib
-.include PMOS-180nm.lib
+.include osu018.lib
 
 *inverters
 m2 q qb vdd vdd CMOSP W=0.36u L=0.18u M=1
@@ -33,11 +32,9 @@ v3 pre gnd pulse(0V 1.8V 0 10ps 10ps 20ns 40ns)
 * Control Statements 
 .control
 run
-print allv > plot_data_v.txt
-print alli > plot_data_i.txt
 
 plot v(q)v(qb)
-plot v(wl) v(pre)
+plot v(wl)+2 v(pre)
 
 .endc
 .end

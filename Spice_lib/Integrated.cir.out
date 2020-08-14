@@ -1,0 +1,99 @@
+*total circuit
+
+.include osu018.lib
+
+*6t cell
+
+*inverters
+m2 q qb vdd vdd CMOSP W=0.36u L=0.18u M=1
+m5 qb q vdd vdd CMOSP W=0.36u L=0.18u M=1
+m3 q qb gnd gnd CMOSN W=0.72u L=0.18u M=1
+m4 qb q gnd gnd CMOSN W=0.72u L=0.18u M=1
+
+*access transistors
+m1 q wl bl gnd CMOSN W=0.36u L=0.18u M=1
+m6 qb wl br gnd CMOSN W=0.36u L=0.18u M=1
+
+* precharge circuit
+m7 br pre vdd vdd CMOSP W=0.36u L=0.18u M=1
+m8 bl pre vdd vdd  CMOSP W=0.36u L=0.18u M=1
+m9 bl pre br vdd CMOSP W=0.36u L=0.18u M=1
+
+*sense amplifier
+
+m10 N002 sen vdd vdd CMOSP l=0.18u w=1.35u
+
+m11 check check N002 N002 CMOSP l=0.18u w=0.45u
+
+m12 amp_out check N002 N002 CMOSP l=0.18u w=0.9u
+
+m13 check bl 0 0 CMOSN l=0.18u w=0.45u
+
+m14 amp_out br 0 0 CMOSN l=0.18u w=0.45u
+
+*inverter
+m15 dout amp_out vdd vdd CMOSP l=0.18u w=0.9u
+m16 dout amp_out gnd gnd CMOSN l=0.18u w=0.45u
+
+
+*write drivers
+
+
+*inverters for enable and data input
+m17 bl_bar din vdd vdd CMOSP w=0.36u l=0.18u
+m18 bl_bar din gnd gnd CMOSN w=180.000000n l=0.18u
+m19 we_bar we vdd vdd CMOSP w=0.36u l=0.18u
+m20 we_bar we gnd gnd CMOSN w=0.18u l=0.18u
+
+*tristate for BL
+m21 int1 bl_bar vdd vdd CMOSP w=0.36u l=0.18u
+m22 br we int1 vdd CMOSP w=0.36u l=0.18u
+m23 br we_bar int2 gnd CMOSN w=0.18u l=0.18u
+m24 int2 bl_bar gnd gnd CMOSN w=0.18u l=0.18u
+
+*tristate for BR
+m25 int3 din vdd vdd CMOSP w=0.36u l=0.18u
+m26 bl we int3 vdd CMOSP w=0.36u l=0.18u
+m27 bl we_bar int4 gnd CMOSN w=0.18u l=0.18u
+m28 int4 din gnd gnd CMOSN w=0.18u l=0.18u
+
+
+*voltages
+
+v1 vdd gnd  dc 1.8V
+
+v2 wl gnd pulse(0V 1.8V 0ns 1ns 1ns 50ns 100ns)
+
+v3  pre gnd pulse(0V 1.8V 50ns 1ns 1ns 50ns 100ns)
+
+v4 din gnd pulse(0V 1.8V 0ns 1ns 1ns 10ns 20ns)
+
+v5 we gnd pulse(0V 1.8V 0ns 1ns 1ns 50ns 100ns)
+
+v6 sen gnd pulse(0V 1.8V 0 1ns 1ns 50ns 100ns)
+
+.tran 10e-9 400e-09 0e-09
+
+
+.control
+run
+
+plot v(wl)+10 v(din)+8 v(we)+6 v(pre)+4 v(sen)+2 v(dout)
+plot v(bl)+2 v(br) 
+
+.endc
+.end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

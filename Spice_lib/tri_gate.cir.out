@@ -1,7 +1,7 @@
 *trigate  buffer
 
-.include NMOS-180nm.lib
-.include PMOS-180nm.lib
+.include osu018.lib
+
 m2 in_bar in vdd vdd CMOSP W=0.9u L=0.18u M=1
 m1 in_bar in gnd gnd CMOSN W=0.36u L=0.18u M=1
 
@@ -24,8 +24,7 @@ v3  en gnd pulse(0 1.8V 0 10ps 10ps 50ns 100ns)
 * Control Statements 
 .control
 run
-print allv > plot_data_v.txt
-print alli > plot_data_i.txt
+
 plot v(in)
 plot v(en)
 plot v(out)

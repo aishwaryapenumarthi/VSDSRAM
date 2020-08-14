@@ -1,7 +1,7 @@
 *circuit for hold state i.e when wl=0
 
-.include NMOS-180nm.lib
-.include PMOS-180nm.lib
+.include osu018.lib
+
 m1 q qbar net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.36u L=0.18u M=1
 m4 qbar q net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.36u L=0.18u M=1
 m2 q qbar gnd gnd CMOSN W=0.72u L=0.18u M=1
@@ -13,8 +13,6 @@ v1 q gnd  dc 1.8V
 * Control Statements 
 .control
 run
-print allv > plot_data_v.txt
-print alli > plot_data_i.txt
 
 plot  v(qbar) vs v(q) v(q) vs v(qbar)
 .endc
