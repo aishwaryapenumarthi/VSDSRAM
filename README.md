@@ -8,28 +8,19 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
 - [Desired Specifications](#desired-specifications)
 - [6T-CELL](#6t-cell)
 - [Modes of operation of sram](#modes-of-operation-of-sram)
-  * [**1. Hold mode :**](#--1-hold-mode----)
-    + [SNM curve](#snm-curve)
-  * [**2. Read mode :**](#--2-read-mode----)
-    + [Precharge circuit :](#precharge-circuit--)
-      - [Simulated waveforms :](#simulated-waveforms--)
-    + [Sense amplifier :](#sense-amplifier--)
-      - [Simulated waveforms :](#simulated-waveforms---1)
-  * [**3. Write mode :**](#--3-write-mode----)
-    + [Write Driver :](#write-driver--)
-      - [Simulated waveforms:](#simulated-waveforms-)
+  - [**1. Hold mode :**](#1-hold-mode-)
+  - [**2. Read mode :**](#2-read-mode-)
+  - [**3. Write mode :**](#3-write-mode-)
 - [Block diagram for for 1-bit SRAM](#block-diagram-for-for-1-bit-sram)
-  * [Simulated waveforms :](#simulated-waveforms---2)
+  - [Simulated waveforms :](#simulated-waveforms-)
 - [IP usage](#ip-usage)
-  * [Ngspice for Simulation](#ngspice-for-simulation)
-  * [Steps to use Ngspice](#steps-to-use-ngspice)
-  * [For Simulation of this IP](#for-simulation-of-this-ip)
-    + [To Run Simulation](#to-run-simulation)
+  - [Ngspice for Simulation](#ngspice-for-simulation)
+  - [Steps to use Ngspice](#steps-to-use-ngspice)
+  - [For Simulation of this IP](#for-simulation-of-this-ip)
 - [Future work](#future-work)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 - [Contact Information](#contact-information)
-
 
 ## Desired Specifications
 
@@ -51,7 +42,7 @@ WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of tw
 
 <img align="center" width="1000"  src="/Waveforms/SNM_CURVE.png">
 
-Calculated **SNM ** value for above curve is ** 0.59 .**
+Calculated  value for above curve is  0.59 .
 
 ### **2. Read mode :**
 WL=1 ==> Aceess transistors will be on.
@@ -85,7 +76,7 @@ WL=1 ==> Access transistors will be on .
 Write '0 ': Initially Q=1 and Q = 0. Here BL is forced to 0 and this causes M4 and M6 transistors conduct .
 When Q less than Vth of M1 then M1 gets off. Qb becomes high as PMOS(M2) connected toVdd will be ON and Q becomes low i.e logic'0'. That i.e write operation is done by forcing bitlines bl and br , which is done using write driver circuit .
 
-**Note : Condition for cell write completion is Kaccess > Kpup . 
+**Note :** Condition for cell write completion is Kaccess > Kpup . 
 
 #### Write Driver :
 
@@ -106,7 +97,8 @@ Here we is active-0 write enable signal .
 
 ### Simulated waveforms : 
 <img align="center" width="1000"  src="/Waveforms/Integrated_ckt.png">
-<img align="center" width="1000"  src="/Waveforms/bl,br_Integrated.pn
+<img align="center" width="1000"  src="/Waveforms/bl,br_Integrated.png">
+
 
 
 ## IP usage 
@@ -125,21 +117,13 @@ $ ngspice
 ```
 To simulate a netlist, type :
 ```
-ngspice 1 ->  source <filename>.cir
+ngspice 1 ->  source <filename>.cir.out
 ```
 
-You can exit from the Ngspice Shell by typing :
-```
-ngspice 1 ->  exit
-```
-or
- 
+You can exit from the Ngspice Shell by typing : 
 ```
 ngspice 1 ->  quit
 ```
-
-There are several waveforms that need to be obtained to observe the performance of the Bandgap reference circuit .
-
 ### For Simulation of this IP
 
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal .
