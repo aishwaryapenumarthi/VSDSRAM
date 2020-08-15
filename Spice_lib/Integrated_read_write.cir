@@ -1,6 +1,7 @@
 *total circuit
 
-.include osu018.lib
+.include NMOS-180nm.lib
+.include PMOS-180nm.lib
 
 *6t cell
 
@@ -47,39 +48,41 @@ m20 we_bar we gnd gnd CMOSN w=0.18u l=0.18u
 
 *tristate for BL
 m21 int1 bl_bar vdd vdd CMOSP w=0.36u l=0.18u
-m22 br we int1 vdd CMOSP w=0.36u l=0.18u
-m23 br we_bar int2 gnd CMOSN w=0.18u l=0.18u
+m22 bl we int1 vdd CMOSP w=0.36u l=0.18u
+m23 bl we_bar int2 gnd CMOSN w=0.18u l=0.18u
 m24 int2 bl_bar gnd gnd CMOSN w=0.18u l=0.18u
 
 *tristate for BR
 m25 int3 din vdd vdd CMOSP w=0.36u l=0.18u
-m26 bl we int3 vdd CMOSP w=0.36u l=0.18u
-m27 bl we_bar int4 gnd CMOSN w=0.18u l=0.18u
+m26 br we int3 vdd CMOSP w=0.36u l=0.18u
+m27 br we_bar int4 gnd CMOSN w=0.18u l=0.18u
 m28 int4 din gnd gnd CMOSN w=0.18u l=0.18u
 
 
 *voltages
 
+
 v1 vdd gnd  dc 1.8V
 
 v2 wl gnd pulse(0V 1.8V 0ns 1ns 1ns 50ns 100ns)
 
-v3  pre gnd pulse(0V 1.8V 50ns 1ns 1ns 50ns 100ns)
+v3 pre gnd pulse(1.8V 0V 50ns 1ns 1ns 50ns 100ns)
 
-v4 din gnd pulse(0V 1.8V 0ns 1ns 1ns 10ns 20ns)
+v6 we gnd pulse(1.8V 0V 0ns 1ns 1ns 50ns 100ns)
 
-v5 we gnd pulse(0V 1.8V 0ns 1ns 1ns 50ns 100ns)
+v7 sen gnd pulse(0V 1.8V 50ns 1ns 1ns 50ns 100ns)
 
-v6 sen gnd pulse(0V 1.8V 0 1ns 1ns 50ns 100ns)
+v8 din gnd pulse(0V 1.8V 0ns 1ns 1ns 10ns 20ns)
 
-.tran 10e-9 400e-09 0e-09
-
+.tran 10e-12 200e-09 1e-09
 
 .control
 run
 
-plot v(wl)+10 v(din)+8 v(we)+6 v(pre)+4 v(sen)+2 v(dout)
-plot v(bl)+2 v(br) 
+plot v(wl)+12 v(we)+10 v(din)+8 v(sen)+6 v(pre)+4  v(dout)
+
+plot v(bl)+2 v(br)
+
 
 .endc
 .end
