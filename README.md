@@ -96,8 +96,8 @@ Here we is active-0 write enable signal .
 <img align="center" width="1000"  src="/Circuits/block diagram.JPG">
 
 ### Simulated waveforms : 
-<img align="center" width="1000"  src="/Waveforms/Integrated_ckt.png">
-<img align="center" width="1000"  src="/Waveforms/bl,br_Integrated.png">
+<img align="center" width="1000"  src="/Waveforms/Integrated_circuit_in_out.png">
+<img align="center" width="1000"  src="/Waveforms/bl_br_integrated_circuit.png">
 
 
 
