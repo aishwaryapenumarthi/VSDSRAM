@@ -1,7 +1,6 @@
 *total circuit
 
-.include NMOS-180nm.lib
-.include PMOS-180nm.lib
+.include osu018.lib
 
 *6t cell
 
