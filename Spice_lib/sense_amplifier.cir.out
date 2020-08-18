@@ -9,9 +9,9 @@ M1 check check N002 N002 CMOSP l=0.18u w=0.45u
 
 M2 amp_out check N002 N002 CMOSP l=0.18u w=0.9u
 
-M3 check br 0 0 CMOSN l=0.18u w=0.45u
+M3 check br gnd gnd CMOSN l=0.18u w=0.45u
 
-M4 amp_out bl 0 0 CMOSN l=0.18u w=0.45u
+M4 amp_out bl gnd gnd CMOSN l=0.18u w=0.45u
 
 *inverter
 M6 dout amp_out vdd vdd CMOSP l=0.18u w=0.9u
@@ -22,7 +22,7 @@ V2 bl 0 PULSE(0 1.8V 0 100ps 100ps 10ns 20ns)
 
 V3 br 0 PULSE(0 1.5V 0 100ps 100ps 10ns 20ns)
 
-V1 vdd 0 1.8V
+V1 vdd gnd 1.8V
 
 V4 sen 0 PULSE(0 1.8V 0 10ps 10ps 50ns 100ns)
 
