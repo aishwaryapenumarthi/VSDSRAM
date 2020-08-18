@@ -9,9 +9,9 @@ M1 check check N002 N002 CMOSP l=0.18u w=0.45u
 
 M2 amp_out check N002 N002 CMOSP l=0.18u w=0.9u
 
-M3 check bl 0 0 CMOSN l=0.18u w=0.45u
+M3 check br 0 0 CMOSN l=0.18u w=0.45u
 
-M4 amp_out br 0 0 CMOSN l=0.18u w=0.45u
+M4 amp_out bl 0 0 CMOSN l=0.18u w=0.45u
 
 *inverter
 M6 dout amp_out vdd vdd CMOSP l=0.18u w=0.9u
