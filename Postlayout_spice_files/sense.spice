@@ -33,8 +33,7 @@ V4 sen 0 PULSE(0 1.8V 0 10ps 10ps 50ns 100ns)
 .control
 run
 
-plot v(sen)+4 v(bl)+2 v(br)
-plot v(dout)
+plot v(sen)+6 v(bl)+4 v(br)+2 v(dout)
 
 .endc
 .end
