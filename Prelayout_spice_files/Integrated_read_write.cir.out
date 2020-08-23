@@ -23,13 +23,13 @@ m9 bl pre br vdd CMOSP W=0.36u L=0.18u M=1
 
 m10 N002 sen vdd vdd CMOSP l=0.18u w=1.35u
 
-m11 check check N002 N002 CMOSP l=0.18u w=0.45u
+m11 check check N002 vdd CMOSP l=0.18u w=0.45u
 
-m12 amp_out check N002 N002 CMOSP l=0.18u w=0.9u
+m12 amp_out check N002 vdd CMOSP l=0.18u w=0.9u
 
-m13 check br 0 0 CMOSN l=0.18u w=0.45u
+m13 check br gnd gnd CMOSN l=0.18u w=0.45u
 
-m14 amp_out bl 0 0 CMOSN l=0.18u w=0.45u
+m14 amp_out bl gnd gnd CMOSN l=0.18u w=0.45u
 
 *inverter
 m15 dout amp_out vdd vdd CMOSP l=0.18u w=0.9u
@@ -40,22 +40,22 @@ m16 dout amp_out gnd gnd CMOSN l=0.18u w=0.45u
 
 
 *inverters for enable and data input
-m17 bl_bar din vdd vdd CMOSP w=0.36u l=0.18u
-m18 bl_bar din gnd gnd CMOSN w=180.000000n l=0.18u
-m19 we_bar we vdd vdd CMOSP w=0.36u l=0.18u
-m20 we_bar we gnd gnd CMOSN w=0.18u l=0.18u
+m17 bl_bar din vdd vdd CMOSP w=0.9u l=0.18u
+m18 bl_bar din gnd gnd CMOSN w=0.45u l=0.18u
+m19 we_bar we vdd vdd CMOSP w=0.9u l=0.18u
+m20 we_bar we gnd gnd CMOSN w=0.45u l=0.18u
 
 *tristate for BL
-m21 int1 bl_bar vdd vdd CMOSP w=0.36u l=0.18u
-m22 bl we int1 vdd CMOSP w=0.36u l=0.18u
-m23 bl we_bar int2 gnd CMOSN w=0.18u l=0.18u
-m24 int2 bl_bar gnd gnd CMOSN w=0.18u l=0.18u
+m21 int1 bl_bar vdd vdd CMOSP w=0.9u l=0.18u
+m22 bl we int1 vdd CMOSP w=0.9u l=0.18u
+m23 bl we_bar int2 gnd CMOSN w=0.45u l=0.18u
+m24 int2 bl_bar gnd gnd CMOSN w=0.45u l=0.18u
 
 *tristate for BR
-m25 int3 din vdd vdd CMOSP w=0.36u l=0.18u
-m26 br we int3 vdd CMOSP w=0.36u l=0.18u
-m27 br we_bar int4 gnd CMOSN w=0.18u l=0.18u
-m28 int4 din gnd gnd CMOSN w=0.18u l=0.18u
+m25 int3 din vdd vdd CMOSP w=0.9u l=0.18u
+m26 br we int3 vdd CMOSP w=0.9u l=0.18u
+m27 br we_bar int4 gnd CMOSN w=0.45u l=0.18u
+m28 int4 din gnd gnd CMOSN w=0.45u l=0.18u
 
 
 *voltages

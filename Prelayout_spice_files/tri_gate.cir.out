@@ -13,7 +13,7 @@ m3 net-_m3-pad1_ in_bar gnd gnd CMOSN W=0.45u L=0.18u M=1
 m7 en_bar en vdd vdd CMOSP W=0.9u L=0.18u M=1
 m8 en_bar en gnd gnd CMOSN W=0.36u L=0.18u M=1
 
-c1 out gnd 50f
+*c1 out gnd 50f
 
 v2 vdd gnd  dc 1.8V
 v1  in gnd pulse(0 1.8V 0 10ps 10ps 20ns  40ns)
@@ -25,8 +25,8 @@ v3  en gnd pulse(0 1.8V 0 10ps 10ps 50ns 100ns)
 .control
 run
 
-plot v(in)
 plot v(en)
+plot v(in)
 plot v(out)
 .endc
 .end
