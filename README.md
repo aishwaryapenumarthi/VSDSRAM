@@ -44,7 +44,7 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
 WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of two stable operating points . Therefore, data is held .
 #### SNM curve 
 
-<img align="center" width="1000"  src="/Waveforms/SNM_CURVE.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/SNM_CURVE.png">
 
 Calculated  value for above curve is  0.59 .
 
@@ -62,7 +62,7 @@ Similarly read '0' operation is done .
 
 ##### Simulated waveforms :
 
-<img align="center" width="1000"  src="/Waveforms/precharge_circuit(pre,bl,br).png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/precharge_circuit(pre,bl,br).png">
 
 #### Sense amplifier :  
 
@@ -72,8 +72,8 @@ Here sen is active-0 read enable signal .
 
 ##### Simulated waveforms :
 
-<img align="center" width="1000"  src="/Waveforms/sense_inputs.png">
-<img align="center" width="1000"  src="/Waveforms/sense_out.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/sense_inputs.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/sense_out.png">
 
 ### **3. Write mode :**
 WL=1 ==> Access transistors will be on .
@@ -90,9 +90,9 @@ Here we is active-0 write enable signal .
 
 ##### Simulated waveforms:
 
-<img align="center" width="1000"  src="/Waveforms/writedriver_inputs.png">
-<img align="center" width="1000"  src="/Waveforms/writedriver_out_bl.png">
-<img align="center" width="1000"  src="/Waveforms/writedriver_output_br.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_inputs.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_out_bl.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_output_br.png">
 
 
 ## Block diagram for for 1-bit SRAM
@@ -100,8 +100,8 @@ Here we is active-0 write enable signal .
 <img align="center" width="1000"  src="/Circuits/block diagram.JPG">
 
 ### Simulated waveforms : 
-<img align="center" width="1000"  src="/Waveforms/Integrated_circuit_in_out.png">
-<img align="center" width="1000"  src="/Waveforms/bl_br_integrated_circuit.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/Integrated_circuit_in_out.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/bl_br_integrated_circuit.png">
 
 
 
@@ -144,8 +144,8 @@ $ ngspice tri_gate.cir.out
 ```
 Which gives you following waveforms :
 
-<img align="center" width="1000"  src="/Waveforms/trigate_inputs.png">
-<img align="center" width="1000"  src="/Waveforms/trigate_output.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/trigate_inputs.png">
+<img align="center" width="1000"  src="/Prelayout_Simulations/trigate_output.png">
 
 ### Layout using Magic
 
@@ -207,21 +207,33 @@ sudo apt-get install qflow
 
 <img align="center" width="1000"  src="/LAYOUT/sramcell_layout_measurement.png">
 
+For postlayout simulated waveform (read operation) click [here](/Postlayout_Simulations/6tsramcell_read.png)
+
+For postlayout simulated waveform (write operation) click [here](/Postlayout_Simulations/6tsramcell_write.png)
+
 #### Precharge 
 
 <img align="center" width="1000"  src="/LAYOUT/precharge_layout_measurement.png">
+
+For postlayout simulated waveform click [here](/Postlayout_Simulations/precharge.png)
 
 #### Sense 
 
 <img align="center" width="1000"  src="/LAYOUT/sense_layout_measurement.png">
 
+For postlayout simulated waveform click [here](/Postlayout_Simulations/sense.png)
+
 #### Trigate 
 
 <img align="center" width="1000"  src="/LAYOUT/trigate_layout_measurement.png">
 
+For postlayout simulated waveform click [here](/Postlayout_Simulations/trigate.png)
+
 #### Write Driver
 
 <img align="center" width="1000"  src="/LAYOUT/writedriver_layout_measurement.png">
+
+For postlayout simulated waveform click [here](/Postlayout_Simulations/writedriver.png)
  
 ## Future work
 
