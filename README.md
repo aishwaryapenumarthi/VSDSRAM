@@ -191,9 +191,9 @@ sudo apt-get install qflow
 
 1. Open the repository and change directory to `cd VSDRAM/mag_libs`
 
-2. To view the layout, type on terminal : `magic filename.mag` 
+2. To view the layout, type on terminal : `magic -T sample6m.tech <filename>.mag` 
 
-3. Examples : `magic precharge.mag` , `magic sense.mag`
+3. Examples : `magic -T sample6m.tech precharge.mag` , `magic -T sample6m.tech sense.mag`
 
 3. To extract the spice netlist : Go to Tkcon window and type these commands.
 
