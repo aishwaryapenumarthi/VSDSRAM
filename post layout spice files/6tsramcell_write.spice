@@ -1,0 +1,30 @@
+* SPICE3 file created from 6tsramcell.ext - technology: sample_6m
+
+.option scale=0.09u
+.include osu018.lib
+
+M1000 vdd qb q vdd pmos w=4 l=2
++  ad=66 pd=48 as=33 ps=24
+M1001 qb q vdd vdd pmos w=4 l=2
++  ad=33 pd=24 as=0 ps=0
+M1002 qb q gnd gnd nmos w=8 l=2
++  ad=89 pd=54 as=112 ps=60
+M1003 q wl bl gnd nmos w=4 l=2
++  ad=89 pd=54 as=33 ps=24
+M1004 br wl qb gnd nmos w=4 l=2
++  ad=33 pd=24 as=0 ps=0
+M1005 gnd qb q gnd nmos w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+
+v1  wl gnd pulse(0 1.8V 0 100ps 100ps 40ns 80ns)
+v2  vdd gnd 1.8v
+v3  bl gnd pulse(0 1.8V 0 100ps 100ps 10ns 20ns)
+v4  br gnd pulse(1.8V 0 0 100ps 100ps 10ns 20ns)
+
+.tran 10e-09 100e-09 0e-09
+.control
+run
+
+plot v(wl)+8 v(bl)+6 v(bl)+4 v(q)+2 v(qb)
+
+.endc

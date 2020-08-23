@@ -1,0 +1,40 @@
+* SPICE3 file created from sense.ext - technology: sample_6m
+
+.option scale=0.09u
+.include osu018.lib
+
+M1000 a_n51_n2# a_n57_n24# a_n57_n24# vdd pmos w=4 l=2
++  ad=257 pd=110 as=37 ps=26
+M1001 a_n51_n2# a_n57_n24# a_n35_n29# vdd pmos w=10 l=2
++  ad=0 pd=0 as=80 ps=36
+M1002 a_n35_n29# bl gnd gnd nmos w=4 l=2
++  ad=33 pd=24 as=103 ps=74
+M1003 vdd sen a_n51_n2# vdd pmos w=14 l=2
++  ad=220 pd=84 as=0 ps=0
+M1004 dout a_n35_n29# vdd vdd pmos w=10 l=2
++  ad=80 pd=36 as=0 ps=0
+M1005 dout a_n35_n29# gnd gnd nmos w=4 l=2
++  ad=37 pd=26 as=0 ps=0
+M1006 a_n57_n24# br gnd gnd nmos w=4 l=2
++  ad=33 pd=24 as=0 ps=0
+
+
+V2 bl 0 PULSE(0 1.8V 0 100ps 100ps 10ns 20ns)
+
+V3 br 0 PULSE(0 1.5V 0 100ps 100ps 10ns 20ns)
+
+V1 vdd gnd 1.8V
+
+V4 sen 0 PULSE(0 1.8V 0 10ps 10ps 50ns 100ns)
+
+.tran 10e-09 100e-09 0e-09
+
+* Control Statements 
+.control
+run
+
+plot v(sen)+4 v(bl)+2 v(br)
+plot v(dout)
+
+.endc
+.end

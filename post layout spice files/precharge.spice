@@ -1,0 +1,27 @@
+* SPICE3 file created from /home/aishu09/MAGIC FILES/precharge.ext - technology: sample_6m
+
+.option scale=0.01u
+.include osu018.lib
+
+
+M1000 br pre bl vdd pmos w=36 l=18
++  ad=6966 pd=522 as=6966 ps=522
+M1001 vdd pre bl vdd pmos w=36 l=18
++  ad=5994 pd=468 as=0 ps=0
+M1002 vdd pre br vdd pmos w=36 l=18
++  ad=0 pd=0 as=0 ps=0
+
+v1  vdd gnd 1.8v
+
+
+v2  pre gnd pulse(0 1.8V 50ps 10ps 10ps 40ns 80ns)
+.tran 10e-09 100e-09 0e-09
+
+* Control Statements 
+.control
+run
+
+plot v(pre)+6 v(bl)+3 v(br)
+
+.endc
+.end
