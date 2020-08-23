@@ -1,0 +1,112 @@
+magic
+tech sample_6m
+magscale 1 9
+timestamp 1598034736
+<< nwell >>
+rect -72 -189 432 171
+<< ptransistor >>
+rect 90 9 126 27
+rect 234 9 270 27
+rect 171 -144 189 -108
+<< pdiffusion >>
+rect 81 96 126 99
+rect 81 56 83 96
+rect 123 56 126 96
+rect 234 96 279 99
+rect 81 54 126 56
+rect 90 27 126 54
+rect 234 56 236 96
+rect 276 56 279 96
+rect 234 54 279 56
+rect 234 27 270 54
+rect 90 -18 126 9
+rect 81 -21 126 -18
+rect 81 -61 83 -21
+rect 123 -61 126 -21
+rect 81 -63 126 -61
+rect 81 -102 126 -99
+rect 81 -108 83 -102
+rect 72 -142 83 -108
+rect 123 -108 126 -102
+rect 234 -18 270 9
+rect 234 -21 279 -18
+rect 234 -61 236 -21
+rect 276 -61 279 -21
+rect 234 -63 279 -61
+rect 234 -102 279 -99
+rect 234 -108 236 -102
+rect 123 -142 171 -108
+rect 72 -144 171 -142
+rect 189 -142 236 -108
+rect 276 -108 279 -102
+rect 276 -142 288 -108
+rect 189 -144 288 -142
+<< pdcontact >>
+rect 83 56 123 96
+rect 236 56 276 96
+rect 83 -61 123 -21
+rect 83 -142 123 -102
+rect 236 -61 276 -21
+rect 236 -142 276 -102
+<< nsubstratendiff >>
+rect -54 96 -9 99
+rect -54 56 -52 96
+rect -54 54 -9 56
+rect 369 96 414 99
+rect 369 56 371 96
+rect 411 56 414 96
+rect 369 54 414 56
+<< nsubstratencontact >>
+rect -52 56 -9 96
+rect 371 56 411 96
+<< polysilicon >>
+rect 162 56 207 63
+rect 162 27 168 56
+rect 63 9 90 27
+rect 126 24 168 27
+rect 200 27 207 56
+rect 200 24 234 27
+rect 126 9 234 24
+rect 270 9 297 27
+rect 171 -108 189 9
+rect 171 -171 189 -144
+<< polycontact >>
+rect 168 24 200 56
+<< metal1 >>
+rect -54 126 414 162
+rect -54 99 -9 126
+rect 369 99 414 126
+rect -54 96 126 99
+rect -54 56 -52 96
+rect -9 56 83 96
+rect 123 56 126 96
+rect 234 96 414 99
+rect -54 54 126 56
+rect 162 56 207 72
+rect 162 24 168 56
+rect 200 24 207 56
+rect 234 56 236 96
+rect 276 56 371 96
+rect 411 56 414 96
+rect 234 54 414 56
+rect 162 18 207 24
+rect 81 -21 126 -18
+rect 81 -61 83 -21
+rect 123 -61 126 -21
+rect 81 -102 126 -61
+rect 81 -142 83 -102
+rect 123 -142 126 -102
+rect 81 -162 126 -142
+rect 234 -21 279 -18
+rect 234 -61 236 -21
+rect 276 -61 279 -21
+rect 234 -102 279 -61
+rect 234 -142 236 -102
+rect 276 -142 279 -102
+rect 234 -162 279 -142
+<< labels >>
+rlabel metal1 162 135 162 135 4 vdd
+rlabel metal1 180 72 180 72 4 pre
+rlabel metal1 99 -162 99 -162 4 bl
+rlabel metal1 252 -162 252 -162 4 br
+<< end >>
