@@ -135,7 +135,7 @@ To clone the Repository and download the Netlist files for Simulation, enter the
 ```
 $  sudo apt install -y git
 $ git clone https://github.com/aishwaryapenumarthi/SRAM.git
-$ cd SRAM/Spice_lib
+$ cd SRAM/Postlayout_spice_files
 ```
 #### To Run Simulation 
 **Example :** To run simulations of trigate circuit , type the below command 
