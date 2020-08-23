@@ -1,0 +1,18 @@
+timestamp 1597947762
+version 8.2
+tech sample_6m
+style lambda=0.09(generic)
+scale 1000 1 9
+resistclasses 8000 8000 900000 900000 7400 80 80 80 80 80 40
+node "br" 61 153.151 21 -16 pdiff 0 0 86 58 0 0 0 0 0 0 80 42 0 0 0 0 0 0 0 0 0 0
+node "bl" 61 153.151 8 -16 pdiff 0 0 86 58 0 0 0 0 0 0 80 42 0 0 0 0 0 0 0 0 0 0
+node "pre" 164 -4.66294e-15 7 1 p 0 0 0 0 0 0 0 0 112 104 30 22 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1364 292.375 -8 -21 nw 50 40 74 52 2240 192 0 0 0 0 438 204 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "pre" 66.2164
+cap "br" "vdd" 27.3079
+cap "vdd" "bl" 27.3079
+cap "br" "bl" 30.7827
+device mosfet pmos 19 -16 20 -15 2 4 "vdd" "pre" 4 0 "bl" 4 0 "br" 4 0
+device mosfet pmos 26 1 27 2 2 4 "vdd" "pre" 4 0 "br" 4 0 "vdd" 4 0
+device mosfet pmos 10 1 11 2 2 4 "vdd" "pre" 4 0 "bl" 4 0 "vdd" 4 0
+subcap "br" -2.28271

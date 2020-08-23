@@ -1,0 +1,40 @@
+timestamp 1598115420
+version 8.2
+tech sample_6m
+style lambda=0.09(generic)
+scale 1000 1 9
+resistclasses 8000 8000 900000 900000 7400 80 80 80 80 80 40
+node "gnd" 56 217.428 42 -36 ppc 56 30 50 40 0 0 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
+node "br" 15 79.8542 93 -11 ndiff 33 24 0 0 0 0 0 0 0 0 45 28 0 0 0 0 0 0 0 0 0 0
+node "gnd" 56 217.428 1 -35 ppc 56 30 50 40 0 0 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
+node "bl" 15 79.4691 -42 -11 ndc 33 24 0 0 0 0 0 0 0 0 40 26 0 0 0 0 0 0 0 0 0 0
+node "q" 706 304.524 -33 -10 ndiff 89 54 33 24 0 0 0 0 365 360 275 120 0 0 0 0 0 0 0 0 0 0
+node "qb" 613 287.756 8 -23 p 89 54 33 24 0 0 0 0 315 310 275 120 0 0 0 0 0 0 0 0 0 0
+node "wl" 840 94.9191 -35 -13 p 0 0 0 0 0 0 0 0 454 458 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1031 212.749 37 -5 nw 50 40 33 24 728 108 0 0 0 0 155 72 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1031 212.749 -4 -5 nw 50 40 33 24 728 108 0 0 0 0 155 72 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "q" 29.8601
+cap "q" "bl" 19.2392
+cap "vdd" "gnd" 12.618
+cap "qb" "q" 62.8974
+cap "vdd" "qb" 15.1852
+cap "q" "gnd" 25.0109
+cap "vdd" "gnd" 13.2165
+cap "wl" "q" 25.7274
+cap "qb" "gnd" 3.20653
+cap "qb" "wl" 161.653
+cap "q" "gnd" 1.92392
+cap "qb" "br" 19.2392
+cap "qb" "gnd" 25.0109
+cap "gnd" "gnd" 18.4696
+cap "vdd" "q" 6.84862
+cap "vdd" "vdd" 18.4696
+cap "vdd" "qb" 29.8601
+device mosfet nmos 49 -21 50 -20 2 8 "gnd!" "q" 4 0 "gnd" 8 0 "qb" 8 0
+device mosfet nmos 91 -11 92 -10 2 4 "gnd!" "wl" 4 0 "qb" 4 0 "br" 4 0
+device mosfet nmos 8 -20 9 -19 2 8 "gnd!" "qb" 4 0 "q" 8 0 "gnd" 8 0
+device mosfet nmos -35 -10 -34 -9 2 4 "gnd!" "wl" 4 0 "bl" 4 0 "q" 4 0
+device mosfet pmos 49 1 50 2 2 4 "vdd" "q" 4 0 "vdd" 4 0 "qb" 4 0
+device mosfet pmos 8 1 9 2 2 4 "vdd" "qb" 4 0 "q" 4 0 "vdd" 4 0
+subcap "q" -53.7144
+subcap "wl" -1.2318
