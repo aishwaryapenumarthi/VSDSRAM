@@ -5,23 +5,27 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
 
 # Table of contents
 
-- [Desired Specifications](#desired-specifications)
-- [6T-CELL](#6t-cell)
-- [Modes of operation of sram](#modes-of-operation-of-sram)
-  - [**1. Hold mode :**](#1-hold-mode-)
-  - [**2. Read mode :**](#2-read-mode-)
-  - [**3. Write mode :**](#3-write-mode-)
-- [Block diagram for for 1-bit SRAM](#block-diagram-for-for-1-bit-sram)
-  - [Simulated waveforms :](#simulated-waveforms-)
-- [IP usage](#ip-usage)
-  - [Ngspice for Simulation](#ngspice-for-simulation)
-  - [Steps to use Ngspice](#steps-to-use-ngspice)
-  - [For Simulation of this IP](#for-simulation-of-this-ip)
-- [Future work](#future-work)
-- [Author](#author)
-- [Acknowledgements](#acknowledgements)
-- [Contact Information](#contact-information)
-
+- [SRAM](#sram)
+- [Table of contents](#table-of-contents)
+  - [Desired Specifications](#desired-specifications)
+  - [6T-CELL](#6t-cell)
+  - [Modes of operation of sram](#modes-of-operation-of-sram)
+    - [**1. Hold mode :**](#1-hold-mode-)
+    - [**2. Read mode :**](#2-read-mode-)
+    - [**3. Write mode :**](#3-write-mode-)
+  - [Block diagram for for 1-bit SRAM](#block-diagram-for-for-1-bit-sram)
+    - [Simulated waveforms :](#simulated-waveforms-)
+  - [IP usage](#ip-usage)
+    - [Ngspice for Simulation](#ngspice-for-simulation)
+    - [Steps to use Ngspice](#steps-to-use-ngspice)
+    - [For Simulation of this IP](#for-simulation-of-this-ip)
+    - [Layout using Magic](#layout-using-magic)
+    - [To View Magic Layouts](#to-view-magic-layouts)
+    - [Layouts](#layouts)
+  - [Future work](#future-work)
+  - [Author](#author)
+  - [Acknowledgements](#acknowledgements)
+  - [Contact Information](#contact-information)
 ## Desired Specifications
 
  * Size : 4KB (1024 x 32)
@@ -143,13 +147,85 @@ Which gives you following waveforms :
 <img align="center" width="1000"  src="/Waveforms/trigate_inputs.png">
 <img align="center" width="1000"  src="/Waveforms/trigate_output.png">
 
+### Layout using Magic
+
+*For ubuntu linux*
+
+Download Magic from this [link](http://opencircuitdesign.com/magic/)
+
+
+```html
+Open Terminal and type below commands. 
+cd Downloads/
+tar xzf magic-7.5.232.tgz
+cd magic-7.5.232/
+sudo apt-get install m4
+sudo apt-get install tcl-dev
+sudo apt-get install tk-dev
+sudo apt-get install blt
+sudo apt-get install freeglut3
+sudo apt-get install libglut3
+sudo apt-get install libgl1-mesa-dev
+sudo apt-get install libglu1-mesa-dev
+./configure
+sudo apt-get install csh
+sudo make
+sudo make install
+```
+Or
+
+Install Qflow & It will install all necessary open source tools including magic.
+
+Download qflow from this [link](http://opencircuitdesign.com/qflow/)
+
+```html
+Open Terminal and type below commands. 
+cd Downloads/
+tar xzf qflow-1.4.83.tgz
+sudo apt-get update
+sudo apt-get install qflow
+```
+
+
+### To View Magic Layouts
+
+1. Open the repository and change directory to `cd VSDRAM/mag_libs`
+
+2. To view the layout, type on terminal : `magic filename.mag` 
+
+3. Examples : `magic precharge.mag` , `magic sense.mag`
+
+3. To extract the spice netlist : Go to Tkcon window and type these commands.
+
+`extract all`
+
+`ext2spice`
+
+### Layouts 
+
+#### 6T SRAM CELL
+
+<img align="center" width="1000"  src="/LAYOUT/sramcell_layout_measurement.png">
+
+#### Precharge 
+
+<img align="center" width="1000"  src="/LAYOUT/precharge_layout_measurement.png">
+
+#### Sense 
+
+<img align="center" width="1000"  src="/LAYOUT/sense_layout_measurement.png">
+
+#### Trigate 
+
+<img align="center" width="1000"  src="/LAYOUT/trigate_layout_measurement.png">
+
+#### Write Driver
+
+<img align="center" width="1000"  src="/LAYOUT/writedriver_layout_measurement.png">
+ 
 ## Future work
 
-1.Magic layouts of above subcircuits are need to be done . 
-
-2.OpenRam compiler will be used , which aids memory design . For Openram compiler, spice netlist, magic files, and gds for each and every block (i.e subcircuit) must be provided . Therefore, .mag, .gds files of all subcircuits should be generated .
-
-3.The setup script and technology directory for osu018  has to be created . 
+The setup script and technology directory for osu018  has to be created in OpenRAM compiler.
 
 ## Author
 
