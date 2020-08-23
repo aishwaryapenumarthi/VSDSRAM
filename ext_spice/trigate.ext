@@ -1,65 +1,69 @@
-timestamp 1598177544
+timestamp 1598192121
 version 8.2
 tech sample_6m
 style lambda=0.09(generic)
 scale 1000 1 9
 resistclasses 8000 8000 900000 900000 7400 80 80 80 80 80 40
 node "gnd" 58 204.89 7 -72 ppc 35 24 50 40 0 0 0 0 0 0 155 72 0 0 0 0 0 0 0 0 0 0
+node "gnd" 64 216.796 -44 -52 ppc 37 26 50 40 0 0 0 0 0 0 165 76 0 0 0 0 0 0 0 0 0 0
 node "a_7_n48#" 49 150.426 7 -48 ndiff 70 48 0 0 0 0 0 0 0 0 85 44 0 0 0 0 0 0 0 0 0 0
-node "en" 340 27.9121 4 -29 p 0 0 0 0 0 0 0 0 184 188 0 0 0 0 0 0 0 0 0 0 0 0
-node "in" 126 5.14263 -79 -19 p 0 0 0 0 0 0 0 0 68 72 0 0 0 0 0 0 0 0 0 0 0 0
-node "gnd" 64 216.796 28 -26 ppc 37 26 50 40 0 0 0 0 0 0 165 76 0 0 0 0 0 0 0 0 0 0
-node "gnd" 64 216.796 -52 -27 ndc 37 26 50 40 0 0 0 0 0 0 165 76 0 0 0 0 0 0 0 0 0 0
+node "gnd" 64 216.796 38 -25 ppc 37 26 50 40 0 0 0 0 0 0 165 76 0 0 0 0 0 0 0 0 0 0
+node "in" 126 5.14263 -36 -39 p 0 0 0 0 0 0 0 0 68 72 0 0 0 0 0 0 0 0 0 0 0 0
 node "out" 22 150.28 5 -9 pdiff 35 24 63 32 0 0 0 0 0 0 119 58 0 0 0 0 0 0 0 0 0 0
-node "a_2_n2#" 137 189.242 2 -2 p 37 26 80 36 0 0 0 0 77 72 270 118 0 0 0 0 0 0 0 0 0 0
+node "a_2_n2#" 125 181.022 2 -2 p 37 26 80 36 0 0 0 0 71 66 180 82 0 0 0 0 0 0 0 0 0 0
 node "a_5_0#" 48 146.672 5 0 pdiff 0 0 126 64 0 0 0 0 0 0 80 42 0 0 0 0 0 0 0 0 0 0
-node "a_n76_n17#" 186 246.838 -76 -17 pdiff 37 26 80 36 0 0 0 0 112 102 945 388 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1081 236.576 56 -32 nw 50 40 80 36 957 124 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
+node "en" 463 42.0894 4 -29 p 0 0 0 0 0 0 0 0 250 254 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n34_n36#" 186 224.504 -34 -36 ndiff 37 26 80 36 0 0 0 0 112 102 655 272 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1081 236.576 33 3 nw 50 40 80 36 957 124 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
 node "vdd" 2327 227.462 0 -14 nw 50 40 63 32 1334 162 0 0 0 0 155 72 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1081 236.576 -93 -33 nw 50 40 80 36 957 124 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
-cap "a_n76_n17#" "a_5_0#" 24.7331
-cap "gnd" "a_5_0#" 2.2199
-cap "a_7_n48#" "a_n76_n17#" 23.3618
-cap "a_2_n2#" "a_n76_n17#" 12.9455
-cap "gnd" "a_7_n48#" 28.8588
-cap "a_2_n2#" "vdd" 9.39848
-cap "vdd" "in" 4.2834
-cap "a_7_n48#" "a_5_0#" 3.72371
-cap "en" "a_n76_n17#" 5.14508
-cap "vdd" "en" 4.2834
-cap "vdd" "gnd" 11.7295
-cap "a_2_n2#" "en" 10.3923
-cap "out" "vdd" 1.18395
-cap "vdd" "a_n76_n17#" 15.7534
-cap "gnd" "gnd" 6.54132
-cap "out" "gnd" 10.0636
-cap "out" "gnd" 26.3577
-cap "gnd" "a_n76_n17#" 67.7349
-cap "in" "en" 0.147837
-cap "out" "vdd" 7.17914
-cap "gnd" "a_n76_n17#" 11.6949
-cap "gnd" "vdd" 11.7295
-cap "vdd" "a_n76_n17#" 3.85379
-cap "a_2_n2#" "gnd" 1.21511
-cap "vdd" "gnd" 1.60326
-cap "out" "a_n76_n17#" 29.6554
-cap "out" "vdd" 6.07571
-cap "out" "gnd" 5.09838
-cap "gnd" "a_2_n2#" 71.2672
-cap "vdd" "a_n76_n17#" 1.42512
-cap "vdd" "a_5_0#" 30.399
-cap "vdd" "a_7_n48#" 2.26343
-cap "a_2_n2#" "vdd" 5.57224
-cap "out" "a_5_0#" 28.8588
+node "vdd" 1081 236.576 -50 -24 nw 50 40 80 36 957 124 0 0 0 0 160 74 0 0 0 0 0 0 0 0 0 0
+cap "a_5_0#" "out" 28.8588
+cap "a_n34_n36#" "a_7_n48#" 27.5595
+cap "en" "in" 0.669158
+cap "vdd" "a_n34_n36#" 41.1431
+cap "gnd" "out" 5.09838
+cap "vdd" "a_2_n2#" 5.37858
+cap "vdd" "vdd" 9.01117
 cap "out" "a_7_n48#" 28.8588
-cap "out" "a_2_n2#" 7.48049
-device mosfet nmos 7 -50 8 -49 2 5 "gnd!" "a_n76_n17#" 4 0 "gnd" 5 0 "a_7_n48#" 5 0
+cap "gnd" "gnd" 0.699606
+cap "vdd" "out" 5.01891
+cap "vdd" "a_n34_n36#" 3.85379
+cap "gnd" "a_7_n48#" 7.52837
+cap "gnd" "a_5_0#" 2.2199
+cap "vdd" "a_2_n2#" 5.57224
+cap "vdd" "in" 4.2834
+cap "vdd" "a_n34_n36#" 2.88839
+cap "vdd" "gnd" 11.7295
+cap "a_5_0#" "a_7_n48#" 3.72371
+cap "vdd" "gnd" 11.7295
+cap "vdd" "out" 7.17914
+cap "vdd" "a_2_n2#" 9.39848
+cap "vdd" "a_5_0#" 3.89704
+cap "gnd" "a_7_n48#" 28.8588
+cap "a_n34_n36#" "gnd" 11.4502
+cap "a_n34_n36#" "a_2_n2#" 16.3077
+cap "a_2_n2#" "gnd" 22.0376
+cap "a_n34_n36#" "out" 33.681
+cap "vdd" "a_5_0#" 30.399
+cap "out" "gnd" 13.3817
+cap "a_2_n2#" "out" 5.32777
+cap "en" "vdd" 4.2834
+cap "vdd" "a_5_0#" 1.77592
+cap "a_n34_n36#" "gnd" 52.5454
+cap "vdd" "gnd" 1.60326
+cap "en" "a_n34_n36#" 5.84837
+cap "vdd" "a_7_n48#" 2.26343
+cap "a_n34_n36#" "a_5_0#" 19.0559
+cap "en" "a_2_n2#" 13.1955
+cap "a_5_0#" "a_2_n2#" 12.4315
+device mosfet nmos 7 -50 8 -49 2 5 "gnd!" "a_n34_n36#" 4 0 "gnd" 5 0 "a_7_n48#" 5 0
+device mosfet nmos -36 -36 -35 -35 2 4 "gnd!" "in" 4 0 "gnd" 4 0 "a_n34_n36#" 4 0
 device mosfet nmos 7 -29 8 -28 2 5 "gnd!" "en" 4 0 "a_7_n48#" 5 0 "out" 5 0
-device mosfet pmos 62 -18 63 -17 2 10 "vdd" "en" 4 0 "vdd" 10 0 "a_2_n2#" 10 0
-device mosfet nmos 44 -18 45 -17 2 4 "gnd!" "en" 4 0 "gnd" 4 0 "a_2_n2#" 4 0
-device mosfet nmos -52 -19 -51 -18 2 4 "gnd!" "in" 4 0 "gnd" 4 0 "a_n76_n17#" 4 0
-device mosfet pmos -76 -19 -75 -18 2 10 "vdd" "in" 4 0 "vdd" 10 0 "a_n76_n17#" 10 0
+device mosfet nmos 46 -9 47 -8 2 4 "gnd!" "en" 4 0 "a_2_n2#" 4 0 "gnd" 4 0
+device mosfet pmos -36 -18 -35 -17 2 10 "vdd" "in" 4 0 "vdd" 10 0 "a_n34_n36#" 10 0
 device mosfet pmos 5 -2 6 -1 2 9 "vdd" "a_2_n2#" 4 0 "out" 9 0 "a_5_0#" 9 0
-device mosfet pmos 5 18 6 19 2 9 "vdd" "a_n76_n17#" 4 0 "a_5_0#" 9 0 "vdd" 9 0
-subcap "vdd" -28.273
+device mosfet pmos 46 9 47 10 2 10 "vdd" "en" 4 0 "a_2_n2#" 10 0 "vdd" 10 0
+device mosfet pmos 5 18 6 19 2 9 "vdd" "a_n34_n36#" 4 0 "a_5_0#" 9 0 "vdd" 9 0
+subcap "en" -20.6342
+subcap "vdd" -0.670923
 subcap "vdd" -28.548

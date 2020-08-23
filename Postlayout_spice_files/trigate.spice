@@ -3,24 +3,22 @@
 .option scale=0.09u
 .include osu018.lib
 
-
-M1000 a_n76_n17# in vdd vdd pmos w=10 l=2
-+  ad=80 pd=36 as=223 ps=104
-M1001 a_2_n2# en gnd gnd nmos w=4 l=2
+M1000 a_n34_n36# in gnd gnd nmos w=4 l=2
 +  ad=37 pd=26 as=109 ps=76
-M1002 a_5_0# a_2_n2# out vdd pmos w=9 l=2
+M1001 a_5_0# a_2_n2# out vdd pmos w=9 l=2
 +  ad=126 pd=64 as=63 ps=32
-M1003 out en a_7_n48# gnd nmos w=5 l=2
-+  ad=35 pd=24 as=70 ps=48
-M1004 a_7_n48# a_n76_n17# gnd gnd nmos w=5 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1005 vdd a_n76_n17# a_5_0# vdd pmos w=9 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1006 a_n76_n17# in gnd gnd nmos w=4 l=2
-+  ad=37 pd=26 as=0 ps=0
-M1007 a_2_n2# en vdd vdd pmos w=10 l=2
+M1002 vdd en a_2_n2# vdd pmos w=10 l=2
++  ad=223 pd=104 as=80 ps=36
+M1003 a_n34_n36# in vdd vdd pmos w=10 l=2
 +  ad=80 pd=36 as=0 ps=0
-
+M1004 out en a_7_n48# gnd nmos w=5 l=2
++  ad=35 pd=24 as=70 ps=48
+M1005 a_7_n48# a_n34_n36# gnd gnd nmos w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 vdd a_n34_n36# a_5_0# vdd pmos w=9 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 gnd en a_2_n2# gnd nmos w=4 l=2
++  ad=0 pd=0 as=37 ps=26
 
 v2 vdd gnd  dc 1.8V
 v1  in gnd pulse(0 1.8V 0 10ps 10ps 20ns  40ns)
