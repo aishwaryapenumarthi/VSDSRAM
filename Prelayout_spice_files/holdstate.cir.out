@@ -2,10 +2,10 @@
 
 .include osu018.lib
 
-m1 q qbar net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.36u L=0.18u M=1
-m4 qbar q net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.36u L=0.18u M=1
-m2 q qbar gnd gnd CMOSN W=0.72u L=0.18u M=1
-m3 qbar q gnd gnd CMOSN W=0.72u L=0.18u M=1
+m1 q qbar net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.4u L=0.18u M=1
+m4 qbar q net-_m1-pad3_ net-_m1-pad3_ CMOSP W=0.4u L=0.18u M=1
+m2 q qbar gnd gnd CMOSN W=0.8u L=0.18u M=1
+m3 qbar q gnd gnd CMOSN W=0.8u L=0.18u M=1
 v2  net-_m1-pad3_ gnd 1.8v
 v1 q gnd  dc 1.8V
 .dc v1 0e-00 1.8e-00 0.05e-00

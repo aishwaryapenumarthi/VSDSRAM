@@ -2,18 +2,18 @@
 
 .include osu018.lib
 
-m2 in_bar in vdd vdd CMOSP W=0.9u L=0.18u M=1
-m1 in_bar in gnd gnd CMOSN W=0.36u L=0.18u M=1
+m2 in_bar in vdd vdd CMOSP W=0.8u L=0.18u M=1
+m1 in_bar in gnd gnd CMOSN W=0.4u L=0.18u M=1
 
-m4 net-_m4-pad1_ in_bar vdd vdd  CMOSP W=0.9u L=0.18u M=1
-m5 out en_bar net-_m4-pad1_ vdd CMOSP W=0.9u L=0.18u M=1
-m6 out en net-_m3-pad1_ gnd CMOSN W=0.45u L=0.18u M=1
-m3 net-_m3-pad1_ in_bar gnd gnd CMOSN W=0.45u L=0.18u M=1
+m4 net-_m4-pad1_ in_bar vdd vdd  CMOSP W=0.8u L=0.18u M=1
+m5 out en_bar net-_m4-pad1_ vdd CMOSP W=0.8u L=0.18u M=1
+m6 out en net-_m3-pad1_ gnd CMOSN W=0.4u L=0.18u M=1
+m3 net-_m3-pad1_ in_bar gnd gnd CMOSN W=0.4u L=0.18u M=1
 
-m7 en_bar en vdd vdd CMOSP W=0.9u L=0.18u M=1
-m8 en_bar en gnd gnd CMOSN W=0.36u L=0.18u M=1
+m7 en_bar en vdd vdd CMOSP W=0.8u L=0.18u M=1
+m8 en_bar en gnd gnd CMOSN W=0.4u L=0.18u M=1
 
-*c1 out gnd 50f
+c1 out gnd 50f
 
 v2 vdd gnd  dc 1.8V
 v1  in gnd pulse(0 1.8V 0 10ps 10ps 20ns  40ns)
@@ -25,8 +25,6 @@ v3  en gnd pulse(0 1.8V 0 10ps 10ps 50ns 100ns)
 .control
 run
 
-plot v(en)
-plot v(in)
-plot v(out)
+plot v(en)+6 v(in)+3 v(out)
 .endc
 .end

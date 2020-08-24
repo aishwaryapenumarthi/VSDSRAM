@@ -3,19 +3,19 @@
 .include osu018.lib
 
 
-M5 N002 sen vdd vdd CMOSP l=0.18u w=1.35u
+M5 N002 sen vdd vdd CMOSP l=0.18u w=1.2u
 
-M1 check check N002 N002 CMOSP l=0.18u w=0.45u
+M1 check check N002 vdd CMOSP l=0.18u w=0.4u
 
-M2 amp_out check N002 N002 CMOSP l=0.18u w=0.9u
+M2 amp_out check N002 vdd CMOSP l=0.18u w=0.8u
 
-M3 check br gnd gnd CMOSN l=0.18u w=0.45u
+M3 check br gnd gnd CMOSN l=0.18u w=0.4u
 
-M4 amp_out bl gnd gnd CMOSN l=0.18u w=0.45u
+M4 amp_out bl gnd gnd CMOSN l=0.18u w=0.4u
 
 *inverter
-M6 dout amp_out vdd vdd CMOSP l=0.18u w=0.9u
-M7 dout amp_out gnd gnd CMOSN l=0.18u w=0.45u
+M6 dout amp_out vdd vdd CMOSP l=0.18u w=0.8u
+M7 dout amp_out gnd gnd CMOSN l=0.18u w=0.4u
 
 
 V2 bl 0 PULSE(0 1.8V 0 100ps 100ps 10ns 20ns)

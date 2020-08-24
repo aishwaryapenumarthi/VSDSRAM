@@ -1,11 +1,11 @@
 *precharge circuit
 
 .include osu018.lib
-m1 bl pre vdd  vdd  CMOSP W=0.36u L=0.18u M=1
-m3 br pre vdd vdd CMOSP W=0.36u L=0.18u M=1
-m2 br pre bl gnd CMOSN W=0.36u L=0.18u M=1
-*C1 bl gnd 20fF
-*C2 br gnd 20fF
+m1 bl pre vdd  vdd  CMOSP W=0.4u L=0.18u M=1
+m3 br pre vdd vdd CMOSP W=0.4u L=0.18u M=1
+m2 br pre bl gnd CMOSN W=0.4u L=0.18u M=1
+C1 bl gnd 20fF
+C2 br gnd 20fF
 v1  vdd gnd 1.8v
 
 

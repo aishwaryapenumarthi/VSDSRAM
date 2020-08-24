@@ -3,21 +3,20 @@
 .include osu018.lib
 
 *inverters
-m2 q qb vdd vdd CMOSP W=0.36u L=0.18u M=1
-m5 qb q vdd vdd CMOSP W=0.36u L=0.18u M=1
-m3 q qb gnd gnd CMOSN W=0.72u L=0.18u M=1
-m4 qb q gnd gnd CMOSN W=0.72u L=0.18u M=1
+m2 q qb vdd vdd CMOSP W=0.8u L=0.18u M=1
+m5 qb q vdd vdd CMOSP W=0.8u L=0.18u M=1
+m3 q qb gnd gnd CMOSN W=0.4u L=0.18u M=1
+m4 qb q gnd gnd CMOSN W=0.4u L=0.18u M=1
 
 *access transistors
-m1 q wl bl gnd CMOSN W=0.36u L=0.18u M=1
-m6 qb wl blbr gnd CMOSN W=0.36u L=0.18u M=1
+m1 q wl bl gnd CMOSN W=0.4u L=0.18u M=1
+m6 qb wl blbr gnd CMOSN W=0.4u L=0.18u M=1
 
-*m7 blbr gnd vdd vdd CMOSP W=0.36u L=0.18u M=1
-*m8 bl gnd vdd vdd  CMOSP W=0.36u L=0.18u M=1
 
-m7 blbr pre vdd vdd CMOSP W=0.36u L=0.18u M=1
-m8 bl pre vdd vdd  CMOSP W=0.36u L=0.18u M=1
-m9 bl pre blbr vdd CMOSP W=0.36u L=0.18u M=1
+
+m7 blbr pre vdd vdd CMOSP W=0.4u L=0.18u M=1
+m8 bl pre vdd vdd  CMOSP W=0.4u L=0.18u M=1
+m9 bl pre blbr vdd CMOSP W=0.4u L=0.18u M=1
 
 c1 bl gnd 5f
 c2 blbr gnd 10f
