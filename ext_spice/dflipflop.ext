@@ -1,0 +1,78 @@
+timestamp 1598471240
+version 8.2
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 10
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "a_108_n85#" 40 74.622 108 -85 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "a_30_n85#" 40 74.622 30 -85 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "qb" 393 899.008 2 -105 p 20 18 80 52 0 0 0 0 0 0 182 182 0 0 552 284 0 0 0 0 0 0 0 0 0 0
+node "q" 379 1047.61 4 -94 pdif 20 18 80 52 0 0 0 0 0 0 174 174 0 0 732 374 0 0 0 0 0 0 0 0 0 0
+node "a_108_n41#" 40 74.622 108 -41 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "a_30_n43#" 40 74.622 30 -43 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "a_80_n81#" 326 509.348 80 -81 p 20 18 80 52 0 0 0 0 0 0 148 148 0 0 268 142 0 0 0 0 0 0 0 0 0 0
+node "clk" 758 1057.14 2 -58 p 0 0 0 0 0 0 0 0 0 0 394 398 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2_n81#" 318 511.608 2 -81 p 20 18 75 50 0 0 0 0 0 0 144 144 0 0 284 150 0 0 0 0 0 0 0 0 0 0
+node "d_bar" 290 489.989 80 -35 p 20 18 40 26 0 0 0 0 0 0 148 148 0 0 132 74 0 0 0 0 0 0 0 0 0 0
+node "d" 882 1276.85 2 -32 p 0 0 0 0 0 0 0 0 0 0 458 462 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1171 798 64 -100 nw 32 32 80 52 1050 130 0 0 0 0 0 0 0 0 140 78 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1171 798 -14 -100 nw 32 32 80 52 1050 130 0 0 0 0 0 0 0 0 140 78 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1171 798 64 -54 nw 32 32 80 52 1050 130 0 0 0 0 0 0 0 0 140 78 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1263 866.4 -14 -54 nw 32 32 75 50 1140 136 0 0 0 0 0 0 0 0 152 84 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1058 474.24 70 -14 nw 32 32 40 26 624 100 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 46 -85 ndif 100 90 160 160 0 0 0 0 0 0 0 0 0 0 464 272 0 0 0 0 0 0 0 0 0 0
+equiv "gnd" "gnd"
+equiv "gnd" "gnd"
+equiv "gnd" "gnd"
+equiv "gnd" "gnd"
+cap "d_bar" "vdd" 85.026
+cap "clk" "d" 9.0648
+cap "vdd" "d_bar" 67.13
+cap "clk" "vdd" 73.788
+cap "vdd" "q" 136.992
+cap "a_80_n81#" "clk" 183.064
+cap "vdd" "qb" 67.13
+cap "a_2_n81#" "vdd" 136.992
+cap "vdd" "clk" 67.13
+cap "d" "vdd" 73.788
+cap "a_30_n43#" "a_2_n81#" 41.238
+cap "d_bar" "clk" 15.108
+cap "a_2_n81#" "qb" 15.108
+cap "a_30_n85#" "q" 41.238
+cap "d" "vdd" 67.13
+cap "a_80_n81#" "vdd" 67.13
+cap "a_108_n85#" "qb" 41.238
+cap "vdd" "q" 67.13
+cap "a_80_n81#" "a_108_n41#" 41.238
+cap "vdd" "qb" 136.992
+cap "a_80_n81#" "q" 15.108
+cap "vdd" "a_2_n81#" 67.13
+cap "a_80_n81#" "vdd" 136.992
+cap "q" "qb" 583.592
+cap "clk" "a_2_n81#" 183.064
+device mosfet pfet 80 -94 81 -93 2 8 "vdd" "q" 4 0 "vdd" 8 0 "qb" 8 0
+device mosfet nfet 122 -85 123 -84 2 4 "gnd" "q" 4 0 "a_108_n85#" 4 0 "gnd" 4 0
+device mosfet nfet 106 -85 107 -84 2 4 "gnd" "a_80_n81#" 4 0 "qb" 4 0 "a_108_n85#" 4 0
+device mosfet pfet 2 -94 3 -93 2 8 "vdd" "qb" 4 0 "vdd" 8 0 "q" 8 0
+device mosfet nfet 44 -85 45 -84 2 4 "gnd" "qb" 4 0 "a_30_n85#" 4 0 "gnd" 4 0
+device mosfet nfet 28 -85 29 -84 2 4 "gnd" "a_2_n81#" 4 0 "q" 4 0 "a_30_n85#" 4 0
+device mosfet pfet 80 -79 81 -78 2 8 "vdd" "a_80_n81#" 4 0 "vdd" 8 0 "qb" 8 0
+device mosfet pfet 2 -79 3 -78 2 8 "vdd" "a_2_n81#" 4 0 "vdd" 8 0 "q" 8 0
+device mosfet nfet 122 -41 123 -40 2 4 "gnd" "clk" 4 0 "a_108_n41#" 4 0 "gnd" 4 0
+device mosfet nfet 106 -41 107 -40 2 4 "gnd" "d_bar" 4 0 "a_80_n81#" 4 0 "a_108_n41#" 4 0
+device mosfet pfet 80 -48 81 -47 2 8 "vdd" "clk" 4 0 "vdd" 8 0 "a_80_n81#" 8 0
+device mosfet nfet 44 -43 45 -42 2 4 "gnd" "clk" 4 0 "a_30_n43#" 4 0 "gnd" 4 0
+device mosfet nfet 28 -43 29 -42 2 4 "gnd" "d" 4 0 "a_2_n81#" 4 0 "a_30_n43#" 4 0
+device mosfet pfet 2 -48 3 -47 2 8 "vdd" "clk" 4 0 "vdd" 8 0 "a_2_n81#" 8 0
+device mosfet pfet 80 -33 81 -32 2 8 "vdd" "d_bar" 4 0 "vdd" 8 0 "a_80_n81#" 8 0
+device mosfet pfet 2 -29 3 -28 2 7 "vdd" "d" 4 0 "vdd" 7 0 "a_2_n81#" 7 0
+device mosfet nfet 102 -3 103 -2 2 4 "gnd" "d" 4 0 "d_bar" 4 0 "gnd" 4 0
+device mosfet pfet 82 -3 83 -2 2 8 "vdd" "d" 4 0 "d_bar" 8 0 "vdd" 8 0
+subcap "a_30_n85#" -41.238
+subcap "a_30_n43#" -41.238
+subcap "clk" -477.34
+subcap "a_2_n81#" -34.488
+subcap "vdd" -684.432
+subcap "gnd" -218.1
+subcap "a_108_n85#" -41.238
+subcap "a_108_n41#" -44.574

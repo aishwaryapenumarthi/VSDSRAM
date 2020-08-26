@@ -1,0 +1,86 @@
+
+* SPICE3 file created from dflipflop.ext - technology: scmos
+
+.option scale=0.1u
+.include osu018.lib
+
+M1000 a_108_n41# d_bar a_80_n81# gnd nfet w=4 l=2
++  ad=40 pd=36 as=20 ps=18
+M1001 gnd clk a_30_n43# gnd nfet w=4 l=2
++  ad=100 pd=90 as=40 ps=36
+M1002 gnd qb a_30_n85# gnd nfet w=4 l=2
++  ad=0 pd=0 as=40 ps=36
+M1003 gnd q a_108_n85# gnd nfet w=4 l=2
++  ad=0 pd=0 as=40 ps=36
+M1004 gnd d d_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1005 a_2_n81# d vdd vdd pfet w=7 l=2
++  ad=75 pd=50 as=355 ps=232
+M1006 a_80_n81# d_bar vdd vdd pfet w=8 l=2
++  ad=80 pd=52 as=0 ps=0
+M1007 gnd clk a_108_n41# gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 a_30_n43# d a_2_n81# gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1009 a_30_n85# a_2_n81# q gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1010 a_108_n85# a_80_n81# qb gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1011 qb a_80_n81# vdd vdd pfet w=8 l=2
++  ad=80 pd=52 as=0 ps=0
+M1012 q a_2_n81# vdd vdd pfet w=8 l=2
++  ad=80 pd=52 as=0 ps=0
+M1013 a_80_n81# clk vdd vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 a_2_n81# clk vdd vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 vdd d d_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1016 q qb vdd vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 qb q vdd vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 vdd q 0.20fF
+C1 clk a_80_n81# 0.18fF
+C2 a_2_n81# a_30_n43# 0.04fF
+C3 vdd qb 0.20fF
+C4 a_2_n81# qb 0.02fF
+C5 a_80_n81# q 0.02fF
+C6 d_bar vdd 0.15fF
+C7 a_80_n81# a_108_n41# 0.04fF
+C8 d vdd 0.14fF
+C9 q qb 0.58fF
+C10 d_bar clk 0.02fF
+C11 q a_30_n85# 0.04fF
+C12 d clk 0.01fF
+C13 vdd a_2_n81# 0.20fF
+C14 vdd clk 0.14fF
+C15 qb a_108_n85# 0.04fF
+C16 vdd a_80_n81# 0.20fF
+C17 a_2_n81# clk 0.18fF
+C18 a_108_n85# gnd 0.03fF
+C19 a_30_n85# gnd 0.03fF
+C20 qb gnd 0.90fF
+C21 q gnd 1.05fF
+C22 a_108_n41# gnd 0.03fF
+C23 a_30_n43# gnd 0.03fF
+C24 a_80_n81# gnd 0.51fF
+C25 clk gnd 0.58fF
+C26 a_2_n81# gnd 0.48fF
+C27 d_bar gnd 0.49fF
+C28 d gnd 1.28fF
+C29 vdd gnd 3.05fF
+
+
+v3 vdd gnd  dc 1.8V
+v2  d gnd pulse(0 1.8V 0 10ps 10ps 10ns 20ns)
+v1  clk gnd pulse(0 1.8V 0 10ps 10ps 50ns 100ns)
+
+.tran 10e-09 100e-09 0e-09
+
+* Control Statements 
+.control
+run
+plot v(clk)+6 v(d)+4 v(q)+2 v(qb)
+.endc
+.end
