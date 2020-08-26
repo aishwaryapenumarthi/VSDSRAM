@@ -1,34 +1,59 @@
-* SPICE3 file created from writedriver.ext - technology: sample_6m
+* SPICE3 file created from writedriver.ext - technology: scmos
 
+.option scale=0.1u
 .include osu018.lib
-.option scale=0.09u
 
-M1000 gnd we a_4_n29# gnd nmos w=5 l=2
-+  ad=150 pd=100 as=40 ps=26
-M1001 a_5_0# we bl vdd pmos w=10 l=2
-+  ad=140 pd=68 as=70 ps=34
-M1002 vdd we a_4_n29# vdd pmos w=10 l=2
-+  ad=300 pd=140 as=80 ps=36
-M1003 vdd din a_88_2# vdd pmos w=10 l=2
-+  ad=0 pd=0 as=140 ps=68
-M1004 a_88_2# we br vdd pmos w=10 l=2
-+  ad=0 pd=0 as=70 ps=34
-M1005 br a_4_n29# a_91_n46# gnd nmos w=5 l=2
-+  ad=35 pd=24 as=70 ps=48
-M1006 a_n37_n21# din gnd gnd nmos w=5 l=2
+
+M1000 vdd din_bar a_25_10# vdd pfet w=8 l=2
++  ad=160 pd=104 as=80 ps=52
+M1001 a_25_10# we bl vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1002 vdd we we_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1003 a_84_n30# din gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=80 ps=72
+M1004 din_bar din gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 a_27_n30# din_bar gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1006 din_bar din vdd vdd pfet w=8 l=2
 +  ad=40 pd=26 as=0 ps=0
-M1007 a_91_n46# din gnd gnd nmos w=5 l=2
+M1007 a_82_10# we br vdd pfet w=8 l=2
++  ad=80 pd=52 as=40 ps=26
+M1008 vdd din a_82_10# vdd pfet w=8 l=2
 +  ad=0 pd=0 as=0 ps=0
-M1008 bl a_4_n29# a_7_n48# gnd nmos w=5 l=2
-+  ad=35 pd=24 as=70 ps=48
-M1009 a_7_n48# a_n37_n21# gnd gnd nmos w=5 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1010 vdd a_n37_n21# a_5_0# vdd pmos w=10 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1011 a_n37_n21# din vdd vdd pmos w=10 l=2
-+  ad=80 pd=36 as=0 ps=0
-
-
+M1009 br we_bar a_84_n30# gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1010 bl we_bar a_27_n30# gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1011 gnd we we_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+C0 a_82_10# vdd 0.06fF
+C1 vdd din 0.13fF
+C2 bl vdd 0.02fF
+C3 vdd a_25_10# 0.06fF
+C4 a_84_n30# br 0.04fF
+C5 vdd din_bar 0.15fF
+C6 bl a_25_10# 0.04fF
+C7 vdd we 0.28fF
+C8 din we 0.02fF
+C9 din_bar we 0.01fF
+C10 br vdd 0.02fF
+C11 vdd we_bar 0.09fF
+C12 a_82_10# br 0.04fF
+C13 bl a_27_n30# 0.04fF
+C14 din we_bar 0.01fF
+C15 a_84_n30# gnd 0.07fF
+C16 a_27_n30# gnd 0.03fF
+C17 br gnd 0.04fF
+C18 bl gnd 0.04fF
+C19 a_82_10# gnd 0.00fF
+C20 we_bar gnd 0.46fF
+C21 a_25_10# gnd 0.00fF
+C22 din gnd 1.98fF
+C23 din_bar gnd 0.61fF
+C24 we gnd 0.53fF
+C25 vdd gnd 1.74fF
 
 v1  din gnd pulse(0 1.8V 0 100ps 100ps 10ns 20ns)
 v2  vdd gnd 1.8v
@@ -41,3 +66,4 @@ plot v(we)+9 v(din)+6 v(bl)+3 v(br)
 
 .endc
 .end
+

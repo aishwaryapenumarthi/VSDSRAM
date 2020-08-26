@@ -1,0 +1,142 @@
+* SPICE3 file created from Integrated.ext - technology: scmos
+
+.option scale=0.1u
+.include osu018.lib
+
+M1000 a_116_10# we br vdd pfet w=8 l=2
++  ad=80 pd=52 as=80 ps=62
+M1001 gnd qb q gnd nfet w=8 l=2
++  ad=220 pd=178 as=60 ps=44
+M1002 a_n21_n30# din_bar gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1003 qb q gnd gnd nfet w=8 l=2
++  ad=60 pd=44 as=0 ps=0
+M1004 vdd pre bl vdd pfet w=4 l=2
++  ad=376 pd=242 as=80 ps=62
+M1005 vdd we we_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1006 vdd amp_out dout vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1007 a_118_n30# din gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1008 a_n23_10# we bl vdd pfet w=8 l=2
++  ad=80 pd=52 as=0 ps=0
+M1009 din_bar din vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1010 q wl bl gnd nfet w=4 l=2
++  ad=0 pd=0 as=40 ps=36
+M1011 din_bar din gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1012 br pre bl vdd pfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1013 gnd amp_out dout gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1014 vdd pre br vdd pfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 amp_out bl gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1016 vdd sen a_45_n170# vdd pfet w=12 l=2
++  ad=0 pd=0 as=136 ps=76
+M1017 bl we_bar a_n21_n30# gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1018 a_45_n187# br gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1019 a_45_n170# a_45_n187# amp_out vdd pfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1020 br we_bar a_118_n30# gnd nfet w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1021 vdd din a_116_10# vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 vdd qb q vdd pfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1023 qb q vdd vdd pfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1024 a_45_n170# a_45_n187# a_45_n187# vdd pfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1025 vdd din_bar a_n23_10# vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1026 gnd we we_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1027 br wl qb gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 vdd q 0.17fF
+C1 vdd we 0.28fF
+C2 a_118_n30# br 0.04fF
+C3 vdd a_45_n187# 0.23fF
+C4 vdd qb 0.23fF
+C5 din we_bar 0.01fF
+C6 vdd dout 0.09fF
+C7 a_45_n187# a_45_n170# 0.04fF
+C8 vdd pre 0.16fF
+C9 wl qb 0.35fF
+C10 a_n21_n30# bl 0.04fF
+C11 br a_116_10# 0.04fF
+C12 we din 0.01fF
+C13 wl pre 0.01fF
+C14 br bl 0.14fF
+C15 vdd din_bar 0.15fF
+C16 q qb 0.01fF
+C17 vdd br 0.12fF
+C18 bl a_n23_10# 0.04fF
+C19 vdd a_116_10# 0.06fF
+C20 amp_out bl 0.11fF
+C21 vdd bl 0.12fF
+C22 vdd a_n23_10# 0.06fF
+C23 br we_bar 0.02fF
+C24 vdd amp_out 0.11fF
+C25 br din 0.02fF
+C26 din_bar we 0.01fF
+C27 bl we_bar 0.02fF
+C28 amp_out a_45_n170# 0.04fF
+C29 vdd a_45_n170# 0.14fF
+C30 bl din 0.02fF
+C31 q bl 0.04fF
+C32 qb br 0.04fF
+C33 vdd we_bar 0.09fF
+C34 vdd sen 0.05fF
+C35 vdd din 0.13fF
+C36 a_45_n187# gnd 0.03fF
+C37 dout gnd 0.09fF
+C38 amp_out gnd 0.07fF
+C39 a_45_n170# gnd 0.00fF
+C40 q gnd 0.71fF
+C41 qb gnd 0.71fF
+C42 wl gnd 0.97fF
+C43 a_118_n30# gnd 0.07fF
+C44 a_n21_n30# gnd 0.01fF
+C45 br gnd 0.12fF
+C46 bl gnd 0.04fF
+C47 a_116_10# gnd 0.00fF
+C48 we_bar gnd 0.05fF
+C49 a_n23_10# gnd 0.00fF
+C50 din gnd 2.53fF
+C51 din_bar gnd 0.46fF
+C52 vdd gnd 5.13fF
+
+*voltages
+
+
+v1 vdd gnd  dc 1.8V
+
+v2 wl gnd pulse(0V 1.8V 0ns 1ns 1ns 50ns 100ns)
+
+v3 pre gnd pulse(1.8V 0V 50ns 1ns 1ns 50ns 100ns)
+
+v6 we gnd pulse(1.8V 0V 0ns 1ns 1ns 50ns 100ns)
+
+v7 sen gnd pulse(0V 1.8V 50ns 1ns 1ns 50ns 100ns)
+
+v8 din gnd pulse(0V 1.8V 0ns 1ns 1ns 10ns 20ns)
+
+.tran 10e-12 200e-09 1e-09
+
+.control
+run
+
+plot v(wl)+12 v(we)+10 v(din)+8 v(sen)+6 v(pre)+4  v(dout)
+
+plot v(bl)+2 v(br)
+
+
+.endc
+.end

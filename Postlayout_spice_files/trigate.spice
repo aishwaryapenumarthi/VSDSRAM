@@ -1,24 +1,41 @@
-* SPICE3 file created from trigate.ext - technology: sample_6m
+* SPICE3 file created from trigate.ext - technology: scmos
 
-.option scale=0.09u
+.option scale=0.1u
 .include osu018.lib
 
-M1000 a_n34_n36# in gnd gnd nmos w=4 l=2
-+  ad=37 pd=26 as=109 ps=76
-M1001 a_5_0# a_2_n2# out vdd pmos w=9 l=2
-+  ad=126 pd=64 as=63 ps=32
-M1002 vdd en a_2_n2# vdd pmos w=10 l=2
-+  ad=223 pd=104 as=80 ps=36
-M1003 a_n34_n36# in vdd vdd pmos w=10 l=2
-+  ad=80 pd=36 as=0 ps=0
-M1004 out en a_7_n48# gnd nmos w=5 l=2
-+  ad=35 pd=24 as=70 ps=48
-M1005 a_7_n48# a_n34_n36# gnd gnd nmos w=5 l=2
+M1000 vdd en en_bar vdd pfet w=8 l=2
++  ad=120 pd=78 as=40 ps=26
+M1001 a_31_n51# in_bar gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=60 ps=54
+M1002 a_29_n11# en_bar out vdd pfet w=8 l=2
++  ad=80 pd=52 as=40 ps=26
+M1003 in_bar in gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1004 vdd in_bar a_29_n11# vdd pfet w=8 l=2
 +  ad=0 pd=0 as=0 ps=0
-M1006 vdd a_n34_n36# a_5_0# vdd pmos w=9 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1007 gnd en a_2_n2# gnd nmos w=4 l=2
-+  ad=0 pd=0 as=37 ps=26
+M1005 out en a_31_n51# gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 gnd en en_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1007 in_bar in vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+C0 vdd in_bar 0.10fF
+C1 en vdd 0.07fF
+C2 vdd in 0.07fF
+C3 en_bar in_bar 0.01fF
+C4 vdd a_29_n11# 0.06fF
+C5 vdd out 0.02fF
+C6 out a_29_n11# 0.04fF
+C7 out a_31_n51# 0.04fF
+C8 vdd en_bar 0.10fF
+C9 a_31_n51# gnd 0.03fF
+C10 out gnd 0.04fF
+C11 en_bar gnd 0.14fF
+C12 a_29_n11# gnd 0.00fF
+C13 in gnd 0.09fF
+C14 in_bar gnd 0.61fF
+C15 en gnd 0.22fF
+C16 vdd gnd 1.39fF
 
 v2 vdd gnd  dc 1.8V
 v1  in gnd pulse(0 1.8V 0 10ps 10ps 20ns  40ns)
@@ -34,3 +51,5 @@ run
 plot v(en)+6 v(in)+3 v(out)
 .endc
 .end
+
+

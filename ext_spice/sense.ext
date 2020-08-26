@@ -1,59 +1,37 @@
-timestamp 1598000048
+timestamp 1598299037
 version 8.2
-tech sample_6m
-style lambda=0.09(generic)
-scale 1000 1 9
-resistclasses 8000 8000 900000 900000 7400 80 80 80 80 80 40
-node "gnd" 64 217.566 -1 -66 ppc 37 26 50 40 0 0 0 0 0 0 175 80 0 0 0 0 0 0 0 0 0 0
-node "gnd" 100 291.404 -50 -75 ppc 66 48 50 40 0 0 0 0 0 0 265 116 0 0 0 0 0 0 0 0 0 0
-node "bl" 54 11.8439 -35 -53 p 0 0 0 0 0 0 0 0 47 42 40 26 0 0 0 0 0 0 0 0 0 0
-node "br" 54 11.8439 -59 -54 pc 0 0 0 0 0 0 0 0 47 42 40 26 0 0 0 0 0 0 0 0 0 0
-node "dout" 27 173.216 9 -50 ndiff 37 26 80 36 0 0 0 0 0 0 128 62 0 0 0 0 0 0 0 0 0 0
-node "a_n35_n29#" 148 184.739 -35 -29 pdiff 33 24 80 36 0 0 0 0 90 82 300 130 0 0 0 0 0 0 0 0 0 0
-node "a_n57_n24#" 156 148.131 -57 -24 pc 33 24 37 26 0 0 0 0 85 80 185 84 0 0 0 0 0 0 0 0 0 0
-node "a_n51_n2#" 78 265.449 -51 -2 pdiff 0 0 257 110 0 0 0 0 0 0 185 84 0 0 0 0 0 0 0 0 0 0
-node "sen" 91 -1.9984e-15 -43 16 pc 0 0 0 0 0 0 0 0 67 62 30 22 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1143 236.812 -6 -36 nw 50 40 80 36 1015 128 0 0 0 0 175 80 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1693 273.545 -58 -35 nw 50 40 140 48 2622 214 0 0 0 0 200 90 0 0 0 0 0 0 0 0 0 0
-cap "a_n57_n24#" "gnd" 19.2392
-cap "a_n35_n29#" "bl" 32.2497
-cap "sen" "gnd" 1.61072
-cap "a_n35_n29#" "gnd" 19.2392
-cap "a_n57_n24#" "gnd" 1.57411
-cap "a_n35_n29#" "gnd" 46.2727
-cap "vdd" "a_n51_n2#" 29.4385
-cap "br" "a_n57_n24#" 7.62571
-cap "vdd" "gnd" 12.6978
-cap "dout" "a_n57_n24#" 9.31581
-cap "br" "a_n35_n29#" 0.716986
-cap "vdd" "a_n57_n24#" 22.6333
-cap "dout" "a_n35_n29#" 39.5143
-cap "sen" "vdd" 95.7261
-cap "dout" "vdd" 12.2627
-cap "a_n51_n2#" "a_n57_n24#" 14.4294
-cap "vdd" "a_n35_n29#" 3.90265
-cap "sen" "a_n51_n2#" 5.13044
-cap "bl" "gnd" 7.69567
-cap "a_n51_n2#" "a_n35_n29#" 8.65762
-cap "vdd" "a_n51_n2#" 6.7462
-cap "sen" "a_n57_n24#" 2.90606
-cap "gnd" "gnd" 15.5393
-cap "br" "bl" 8.29773
-cap "a_n57_n24#" "a_n35_n29#" 45.2749
-cap "dout" "bl" 0.824536
-cap "vdd" "a_n57_n24#" 3.31284
-cap "vdd" "a_n35_n29#" 18.6696
-cap "br" "gnd" 2.17802
-cap "vdd" "gnd" 3.15425
-cap "dout" "gnd" 24.4678
-cap "a_n51_n2#" "gnd" 10.2938
-cap "a_n57_n24#" "bl" 1.33194
-cap "dout" "br" 0.349803
-device mosfet nmos 7 -50 8 -49 2 4 "gnd!" "a_n35_n29#" 4 0 "gnd" 4 0 "dout" 4 0
-device mosfet nmos -32 -53 -31 -52 2 4 "gnd!" "bl" 4 0 "gnd" 4 0 "a_n35_n29#" 4 0
-device mosfet nmos -50 -53 -49 -52 2 4 "gnd!" "br" 4 0 "gnd" 4 0 "a_n57_n24#" 4 0
-device mosfet pmos 7 -31 8 -30 2 10 "vdd" "a_n35_n29#" 4 0 "vdd" 10 0 "dout" 10 0
-device mosfet pmos -35 -21 -34 -20 2 10 "vdd" "a_n57_n24#" 4 0 "a_n35_n29#" 10 0 "a_n51_n2#" 10 0
-device mosfet pmos -49 -21 -48 -20 2 4 "vdd" "a_n57_n24#" 4 0 "a_n57_n24#" 4 0 "a_n51_n2#" 4 0
-device mosfet pmos -41 -2 -40 -1 2 14 "vdd" "sen" 4 0 "a_n51_n2#" 14 0 "vdd" 14 0
-subcap "vdd" -28.1377
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 10
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "bl" 31 45.12 0 -39 p 0 0 0 0 0 0 0 0 0 0 16 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "br" 31 45.12 -11 -39 p 0 0 0 0 0 0 0 0 0 0 16 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "dout" 21 89.1823 34 -36 ndif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 84 50 0 0 0 0 0 0 0 0 0 0
+node "amp_out" 190 310.17 -1 -20 pdif 20 18 40 26 0 0 0 0 0 0 96 96 0 0 136 76 0 0 0 0 0 0 0 0 0 0
+node "a_n18_n16#" 130 91.654 -18 -16 pc 20 18 20 18 0 0 0 0 0 0 66 66 0 0 132 74 0 0 0 0 0 0 0 0 0 0
+node "a_n9_n13#" 79 -7.10543e-15 -9 -13 pdif 0 0 115 76 0 0 0 0 0 0 0 0 0 0 116 66 0 0 0 0 0 0 0 0 0 0
+node "sen" 58 -7.10543e-15 -4 -2 p 0 0 0 0 0 0 0 0 0 0 30 34 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1097 492.48 21 -26 nw 32 32 40 26 648 102 0 0 0 0 0 0 0 0 84 50 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1407 1203.84 -18 -26 nw 32 32 55 32 1584 162 0 0 0 0 0 0 0 0 80 48 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -9 -52 poc 60 54 64 64 0 0 0 0 0 0 0 0 0 0 216 124 0 0 0 0 0 0 0 0 0 0
+equiv "gnd" "gnd"
+cap "bl" "br" 15.108
+cap "a_n9_n13#" "a_n18_n16#" 41.238
+cap "amp_out" "a_n9_n13#" 10.3095
+cap "vdd" "a_n9_n13#" 79.554
+cap "amp_out" "a_n18_n16#" 117.823
+cap "vdd" "a_n18_n16#" 214.15
+cap "dout" "vdd" 27.816
+cap "vdd" "sen" 45.12
+cap "amp_out" "vdd" 23.364
+cap "amp_out" "vdd" 67.13
+device mosfet nfet 2 -39 3 -38 2 4 "gnd" "bl" 4 0 "gnd" 4 0 "amp_out" 4 0
+device mosfet nfet -9 -39 -8 -38 2 4 "gnd" "br" 4 0 "gnd" 4 0 "a_n18_n16#" 4 0
+device mosfet nfet 32 -36 33 -35 2 4 "gnd" "amp_out" 4 0 "gnd" 4 0 "dout" 4 0
+device mosfet pfet 32 -20 33 -19 2 8 "vdd" "amp_out" 4 0 "vdd" 8 0 "dout" 8 0
+device mosfet pfet -1 -15 0 -14 2 8 "vdd" "a_n18_n16#" 4 0 "amp_out" 8 0 "a_n9_n13#" 8 0
+device mosfet pfet -9 -15 -8 -14 2 4 "vdd" "a_n18_n16#" 4 0 "a_n18_n16#" 4 0 "a_n9_n13#" 4 0
+device mosfet pfet -4 0 -3 1 2 11 "vdd" "sen" 4 0 "a_n9_n13#" 11 0 "vdd" 11 0
+subcap "dout" -53.0203
+subcap "amp_out" -41.238
+subcap "vdd" -102.6

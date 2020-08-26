@@ -1,21 +1,31 @@
-* SPICE3 file created from 6tsramcell.ext - technology: sample_6m
+* SPICE3 file created from 6tsramcell.ext - technology: scmos
 
-.option scale=0.09u
+.option scale=0.1u
 .include osu018.lib
 
-M1000 vdd qb q vdd pmos w=4 l=2
-+  ad=66 pd=48 as=33 ps=24
-M1001 qb q vdd vdd pmos w=4 l=2
-+  ad=33 pd=24 as=0 ps=0
-M1002 qb q gnd gnd nmos w=8 l=2
-+  ad=89 pd=54 as=112 ps=60
-M1003 q wl bl gnd nmos w=4 l=2
-+  ad=89 pd=54 as=33 ps=24
-M1004 br wl qb gnd nmos w=4 l=2
-+  ad=33 pd=24 as=0 ps=0
-M1005 gnd qb q gnd nmos w=8 l=2
-+  ad=0 pd=0 as=0 ps=0
-
+M1000 gnd qb q gnd nfet w=8 l=2
++  ad=80 pd=52 as=60 ps=44
+M1001 vdd qb q vdd pfet w=4 l=2
++  ad=40 pd=36 as=20 ps=18
+M1002 qb q gnd gnd nfet w=8 l=2
++  ad=60 pd=44 as=0 ps=0
+M1003 qb q vdd vdd pfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1004 q wl bl gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1005 br wl qb gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+C0 q vdd 0.16fF
+C1 qb vdd 0.24fF
+C2 bl q 0.04fF
+C3 qb br 0.04fF
+C4 qb wl 0.37fF
+C5 br gnd 0.02fF
+C6 bl gnd 0.02fF
+C7 q gnd 0.25fF
+C8 qb gnd 0.32fF
+C9 wl gnd 0.60fF
+C10 vdd gnd 0.67fF
 
 v1  wl gnd pulse(0 1.8V 0 100ps 100ps 40ns 80ns)
 v2  vdd gnd 1.8v

@@ -1,19 +1,21 @@
-* SPICE3 file created from /home/aishu09/MAGIC FILES/precharge.ext - technology: sample_6m
+* SPICE3 file created from precharge.ext - technology: scmos
 
-.option scale=0.01u
+.option scale=0.1u
 .include osu018.lib
 
-
-M1000 br pre bl vdd pmos w=36 l=18
-+  ad=6966 pd=522 as=6966 ps=522
-M1001 vdd pre bl vdd pmos w=36 l=18
-+  ad=5994 pd=468 as=0 ps=0
-M1002 vdd pre br vdd pmos w=36 l=18
+M1000 vdd pre br vdd pfet w=4 l=2
++  ad=56 pd=44 as=56 ps=44
+M1001 br pre bl vdd pfet w=4 l=2
++  ad=0 pd=0 as=56 ps=44
+M1002 vdd pre bl vdd pfet w=4 l=2
 +  ad=0 pd=0 as=0 ps=0
-
-v1  vdd gnd 1.8v
-
-
+C0 bl vdd 0.05fF
+C1 pre vdd 0.22fF
+C2 br vdd 0.05fF
+*C3 br w_n1073741817_n1073741817# 0.00fF
+*C4 bl w_n1073741817_n1073741817# 0.00fF
+*C5 vdd w_n1073741817_n1073741817# 1.00fF
+v1  vdd gnd 1.8V
 v2  pre gnd pulse(0 1.8V 50ps 10ps 10ps 40ns 80ns)
 .tran 10e-09 100e-09 0e-09
 

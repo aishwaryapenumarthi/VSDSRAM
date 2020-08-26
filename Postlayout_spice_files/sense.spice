@@ -1,23 +1,37 @@
-* SPICE3 file created from sense.ext - technology: sample_6m
+* SPICE3 file created from sense.ext - technology: scmos
 
-.option scale=0.09u
+.option scale=0.1u
 .include osu018.lib
 
-M1000 a_n51_n2# a_n57_n24# a_n57_n24# vdd pmos w=4 l=2
-+  ad=257 pd=110 as=37 ps=26
-M1001 a_n51_n2# a_n57_n24# a_n35_n29# vdd pmos w=10 l=2
-+  ad=0 pd=0 as=80 ps=36
-M1002 a_n35_n29# bl gnd gnd nmos w=4 l=2
-+  ad=33 pd=24 as=103 ps=74
-M1003 vdd sen a_n51_n2# vdd pmos w=14 l=2
-+  ad=220 pd=84 as=0 ps=0
-M1004 dout a_n35_n29# vdd vdd pmos w=10 l=2
-+  ad=80 pd=36 as=0 ps=0
-M1005 dout a_n35_n29# gnd gnd nmos w=4 l=2
-+  ad=37 pd=26 as=0 ps=0
-M1006 a_n57_n24# br gnd gnd nmos w=4 l=2
-+  ad=33 pd=24 as=0 ps=0
-
+M1000 dout amp_out vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=95 ps=58
+M1001 dout amp_out gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=60 ps=54
+M1002 vdd sen a_n9_n13# vdd pfet w=11 l=2
++  ad=0 pd=0 as=115 ps=76
+M1003 a_n9_n13# a_n18_n16# a_n18_n16# vdd pfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1004 a_n9_n13# a_n18_n16# amp_out vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1005 amp_out bl gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 a_n18_n16# br gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+C0 a_n18_n16# vdd 0.21fF
+C1 a_n9_n13# amp_out 0.01fF
+C2 dout vdd 0.03fF
+C3 a_n9_n13# vdd 0.08fF
+C4 br bl 0.02fF
+C5 vdd sen 0.05fF
+C6 vdd amp_out 0.09fF
+C7 a_n18_n16# a_n9_n13# 0.04fF
+C8 a_n18_n16# amp_out 0.12fF
+C9 bl gnd 0.05fF
+C10 br gnd 0.05fF
+C11 dout gnd 0.04fF
+C12 amp_out gnd 0.27fF
+C13 a_n18_n16# gnd 0.09fF
+C14 vdd gnd 1.59fF
 
 V2 bl 0 PULSE(0 1.8V 0 100ps 100ps 10ns 20ns)
 
@@ -37,3 +51,6 @@ plot v(sen)+6 v(bl)+4 v(br)+2 v(dout)
 
 .endc
 .end
+
+
+
