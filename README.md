@@ -198,14 +198,14 @@ sudo apt-get install qflow
 3. To extract the spice netlist : Go to Tkcon window and type these commands.
 
 `extract all`
-
+`ext2spice cthresh 0 rthresh 0`
 `ext2spice`
 
 ### Layouts 
 
 #### 6T SRAM CELL
 
-<img align="center" width="1000"  src="/LAYOUT/sramcell_layout_measurement.png">
+<img align="center" width="1000"  src="/LAYOUT/6tsramcell.png">
 
 For postlayout simulated waveform (read operation) click [here](/Postlayout_Simulations/6tsramcell_read.png)
 
@@ -213,27 +213,39 @@ For postlayout simulated waveform (write operation) click [here](/Postlayout_Sim
 
 #### Precharge 
 
-<img align="center" width="1000"  src="/LAYOUT/precharge_layout_measurement.png">
+<img align="center" width="1000"  src="/LAYOUT/precharge.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/precharge.png)
 
 #### Sense 
 
-<img align="center" width="1000"  src="/LAYOUT/sense_layout_measurement.png">
+<img align="center" width="1000"  src="/LAYOUT/sense.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/sense.png)
 
 #### Trigate 
 
-<img align="center" width="1000"  src="/LAYOUT/trigate_layout_measurement.png">
+<img align="center" width="1000"  src="/LAYOUT/trigate.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/trigate.png)
 
 #### Write Driver
 
-<img align="center" width="1000"  src="/LAYOUT/writedriver_layout_measurement.png">
+<img align="center" width="1000"  src="/LAYOUT/writedriver.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/writedriver.png)
+
+#### D-FLIP FLOP
+
+<img align="center" width="1000"  src="/LAYOUT/dflipflop.png">
+
+For postlayout simulated waveform click [here](/Postlayout_Simulations/dflipflop.png)
+
+#### Integrated circuit
+
+<img align="center" width="1000"  src="/LAYOUT/Integrated.png">
+
+For postlayout simulated waveform click [here](/Postlayout_Simulations/Integrated.png)
  
 ## Future work
 
