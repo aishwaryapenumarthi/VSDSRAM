@@ -1,0 +1,42 @@
+* SPICE3 file created from sramcell.ext - technology: scmos
+
+.option scale=0.1u
+.include osu018.lib
+
+M1000 vdd q qb vdd pfet w=4 l=2
++  ad=48 pd=40 as=24 ps=20
+M1001 gnd q qb gnd nfet w=8 l=2
++  ad=96 pd=56 as=68 ps=46
+M1002 q wl bl gnd nfet w=4 l=2
++  ad=68 pd=46 as=20 ps=18
+M1003 qb wl br gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1004 q qb gnd gnd nfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 q qb vdd vdd pfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+C0 bl q 0.04fF
+C1 qb vdd 0.26fF
+C2 br bl 0.05fF
+C3 qb q 0.68fF
+C4 vdd q 0.17fF
+C5 qb br 0.04fF
+C6 br gnd 0.02fF
+C7 bl gnd 0.02fF
+C8 wl gnd 0.09fF
+C9 q gnd 0.30fF
+C10 qb gnd 0.21fF
+C11 vdd gnd 0.69fF
+
+v1  wl gnd pulse(0 1.8V 0 100ps 100ps 40ns 80ns)
+v2  vdd gnd 1.8v
+v3  bl gnd pulse(0 1.8V 0 100ps 100ps 10ns 20ns)
+v4  br gnd pulse(1.8V 0 0 100ps 100ps 10ns 20ns)
+
+.tran 10e-09 100e-09 0e-09
+.control
+run
+
+plot v(wl)+8 v(bl)+6 v(br)+4 v(q)+2 v(qb)
+
+.endc

@@ -1,17 +1,17 @@
-timestamp 1598301371
+timestamp 1599138072
 version 8.2
 tech scmos
 style TSMC0.18um(tsmc18)from:t11b
 scale 1000 1 10
 resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
-node "br" 49 7.99361e-15 12 -17 pdif 0 0 56 44 0 0 0 0 0 0 0 0 0 0 60 38 0 0 0 0 0 0 0 0 0 0
-node "bl" 49 7.99361e-15 3 -17 pdc 0 0 56 44 0 0 0 0 0 0 0 0 0 0 60 38 0 0 0 0 0 0 0 0 0 0
-node "pre" 150 0 1 0 p 0 0 0 0 0 0 0 0 0 0 78 82 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1116 1212.96 -8 -23 nw 32 32 56 44 1596 160 0 0 0 0 0 0 0 0 256 136 0 0 0 0 0 0 0 0 0 0
+node "bl" 52 7.10543e-15 14 25 pdif 0 0 64 48 0 0 0 0 0 0 0 0 0 0 64 40 0 0 0 0 0 0 0 0 0 0
+node "br" 52 7.10543e-15 4 25 pdc 0 0 64 48 0 0 0 0 0 0 0 0 0 0 64 40 0 0 0 0 0 0 0 0 0 0
+node "pre" 154 -6.75016e-14 2 41 p 0 0 0 0 0 0 0 0 0 0 88 88 0 0 32 24 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1321 1162.8 -4 17 nw 32 32 64 48 1530 158 0 0 0 0 0 0 0 0 136 76 0 0 0 0 0 0 0 0 0 0
 substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "vdd" "bl" 45.066
-cap "vdd" "pre" 216.742
-cap "br" "vdd" 45.066
-device mosfet pfet 10 -17 11 -16 2 4 "vdd" "pre" 4 0 "bl" 4 0 "br" 4 0
-device mosfet pfet 15 0 16 1 2 4 "vdd" "pre" 4 0 "br" 4 0 "vdd" 4 0
-device mosfet pfet 3 0 4 1 2 4 "vdd" "pre" 4 0 "bl" 4 0 "vdd" 4 0
+cap "pre" "vdd" 349.97
+cap "vdd" "br" 48.96
+cap "vdd" "bl" 48.96
+device mosfet pfet 12 25 13 26 2 4 "vdd" "pre" 4 0 "br" 4 0 "bl" 4 0
+device mosfet pfet 18 41 19 42 2 4 "vdd" "pre" 4 0 "bl" 4 0 "vdd" 4 0
+device mosfet pfet 4 41 5 42 2 4 "vdd" "pre" 4 0 "br" 4 0 "vdd" 4 0

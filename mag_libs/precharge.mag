@@ -1,46 +1,50 @@
 magic
 tech scmos
-timestamp 1598302308
+timestamp 1599138072
 << nwell >>
-rect -2 -23 24 20
+rect -4 17 30 62
 << ptransistor >>
-rect 4 0 8 2
-rect 14 0 18 2
-rect 10 -17 12 -13
+rect 4 41 8 43
+rect 18 41 22 43
+rect 12 25 14 29
 << pdiffusion >>
-rect 4 2 8 5
-rect 14 2 18 5
-rect 4 -3 8 0
-rect 14 -3 18 0
-rect 8 -17 10 -13
-rect 12 -17 14 -13
+rect 4 43 8 47
+rect 18 43 22 47
+rect 4 37 8 41
+rect 18 37 22 41
+rect 8 25 12 29
+rect 14 25 18 29
 << pdcontact >>
-rect 4 5 8 9
-rect 14 5 18 9
-rect 4 -7 8 -3
-rect 14 -7 18 -3
-rect 4 -17 8 -13
-rect 14 -17 18 -13
+rect 4 47 8 51
+rect 18 47 22 51
+rect 4 33 8 37
+rect 18 33 22 37
+rect 4 25 8 29
+rect 18 25 22 29
 << nsubstratencontact >>
-rect 4 13 8 17
-rect 14 13 18 17
+rect 4 55 8 59
+rect 18 55 22 59
 << polysilicon >>
-rect 2 0 4 2
-rect 8 0 14 2
-rect 18 0 20 2
-rect 10 -13 12 0
-rect 10 -19 12 -17
+rect 2 41 4 43
+rect 8 41 11 43
+rect 15 41 18 43
+rect 22 41 24 43
+rect 12 29 14 41
+rect 12 23 14 25
+<< polycontact >>
+rect 11 41 15 45
 << metal1 >>
-rect 8 13 14 17
-rect 4 9 8 13
-rect 14 9 18 13
-rect 4 -13 8 -7
-rect 4 -18 8 -17
-rect 14 -13 18 -7
-rect 14 -18 18 -17
+rect 8 55 18 59
+rect 4 51 8 55
+rect 18 51 22 55
+rect 11 45 15 49
+rect 4 29 8 33
+rect 4 21 8 25
+rect 18 29 22 33
+rect 18 21 22 25
 << labels >>
-rlabel polysilicon 11 1 11 1 1 pre
-rlabel metal1 11 15 11 15 1 vdd
-rlabel metal1 4 -18 8 -18 1 bl
-rlabel metal1 14 -18 18 -18 1 br
+rlabel metal1 20 23 20 23 1 bl
+rlabel metal1 13 57 13 57 1 vdd
+rlabel metal1 13 47 13 47 1 pre
+rlabel metal1 6 23 6 23 5 br
 << end >>

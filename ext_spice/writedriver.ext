@@ -1,62 +1,61 @@
-timestamp 1598393372
+timestamp 1599060627
 version 8.2
 tech scmos
 style TSMC0.18um(tsmc18)from:t11b
 scale 1000 1 10
 resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
-node "a_84_n30#" 40 74.622 84 -30 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
-node "a_27_n30#" 40 74.622 27 -30 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
-node "br" 21 40.056 82 3 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "bl" 21 40.056 25 3 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "a_82_10#" 47 7.10543e-15 82 10 pdif 0 0 80 52 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
-node "we_bar" 137 642.484 25 -16 p 20 18 40 26 0 0 0 0 0 0 68 68 0 0 384 200 0 0 0 0 0 0 0 0 0 0
-node "a_25_10#" 47 7.10543e-15 25 10 pdif 0 0 80 52 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
-node "din" 1290 1982.6 -15 -50 p 0 0 0 0 0 0 0 0 0 0 670 674 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "din_bar" 383 669.251 -4 -19 ndif 20 18 40 26 0 0 0 0 0 0 196 196 0 0 152 84 0 0 0 0 0 0 0 0 0 0
-node "we" 554 541.884 23 8 p 0 0 0 0 0 0 0 0 0 0 288 292 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 2188 699.2 76 -3 nw 32 32 40 26 920 132 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1058 474.24 46 12 nw 32 32 40 26 624 100 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "vdd" 2188 699.2 19 -3 nw 32 32 40 26 920 132 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1058 474.24 -17 -9 nw 32 32 40 26 624 100 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 -11 -27 poc 80 72 128 128 0 0 0 0 0 0 0 0 0 0 328 196 0 0 0 0 0 0 0 0 0 0
-equiv "gnd" "gnd"
-equiv "gnd" "gnd"
-equiv "gnd" "gnd"
-cap "vdd" "we" 142.404
-cap "br" "a_82_10#" 41.238
-cap "we_bar" "din" 6.47486
-cap "vdd" "we" 67.13
-cap "a_84_n30#" "br" 41.238
-cap "bl" "a_25_10#" 41.238
-cap "bl" "a_27_n30#" 41.238
-cap "din_bar" "vdd" 85.026
-cap "vdd" "din" 67.13
-cap "a_25_10#" "vdd" 56.814
-cap "din_bar" "we" 14.0289
-cap "din_bar" "vdd" 67.13
-cap "bl" "vdd" 23.364
-cap "vdd" "we_bar" 85.026
-cap "we" "din" 16.6188
-cap "vdd" "a_82_10#" 56.814
-cap "vdd" "we" 67.13
-cap "br" "vdd" 23.364
-cap "vdd" "din" 67.13
-device mosfet nfet 84 -32 85 -31 2 4 "gnd" "din" 4 0 "gnd" 4 0 "a_84_n30#" 4 0
-device mosfet nfet 27 -32 28 -31 2 4 "gnd" "din_bar" 4 0 "gnd" 4 0 "a_27_n30#" 4 0
-device mosfet nfet 84 -16 85 -15 2 4 "gnd" "we_bar" 4 0 "a_84_n30#" 4 0 "br" 4 0
-device mosfet nfet 27 -16 28 -15 2 4 "gnd" "we_bar" 4 0 "a_27_n30#" 4 0 "bl" 4 0
-device mosfet nfet -6 -19 -5 -18 2 4 "gnd" "din" 4 0 "gnd" 4 0 "din_bar" 4 0
-device mosfet nfet 57 2 58 3 2 4 "gnd" "we" 4 0 "we_bar" 4 0 "gnd" 4 0
-device mosfet pfet 82 8 83 9 2 8 "vdd" "we" 4 0 "br" 8 0 "a_82_10#" 8 0
-device mosfet pfet 82 24 83 25 2 8 "vdd" "din" 4 0 "a_82_10#" 8 0 "vdd" 8 0
-device mosfet pfet 25 8 26 9 2 8 "vdd" "we" 4 0 "bl" 8 0 "a_25_10#" 8 0
-device mosfet pfet 57 18 58 19 2 8 "vdd" "we" 4 0 "we_bar" 8 0 "vdd" 8 0
-device mosfet pfet -6 -3 -5 -2 2 8 "vdd" "din" 4 0 "vdd" 8 0 "din_bar" 8 0
-device mosfet pfet 25 24 26 25 2 8 "vdd" "din_bar" 4 0 "a_25_10#" 8 0 "vdd" 8 0
-subcap "a_27_n30#" -41.238
-subcap "we_bar" -184.136
-subcap "din_bar" -61.857
-subcap "we" -8.694
-subcap "vdd" -511.235
-subcap "vdd" -18.24
-subcap "vdd" -75.618
+node "a_69_n54#" 40 74.622 69 -54 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "a_31_n54#" 40 101.454 31 -54 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "br" 21 43.95 67 -17 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 96 56 0 0 0 0 0 0 0 0 0 0
+node "we_bar" 137 416.01 29 -40 p 20 18 40 26 0 0 0 0 0 0 68 68 0 0 180 114 112 64 0 0 0 0 0 0 0 0
+node "bl" 21 43.95 29 -17 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 96 56 0 0 0 0 0 0 0 0 0 0
+node "we" 325 262.714 27 -12 p 0 0 0 0 0 0 0 0 0 0 176 176 0 0 180 106 104 60 0 0 0 0 0 0 0 0
+node "a_67_n10#" 47 7.10543e-15 67 -10 pdif 0 0 80 52 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "a_29_n10#" 47 7.10543e-15 29 -10 pdif 0 0 80 52 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "din" 288 379.009 8 -22 pc 0 0 0 0 0 0 0 0 0 0 164 160 0 0 292 162 316 166 0 0 0 0 0 0 0 0
+node "din_bar" 160 355.756 14 -39 ndif 20 18 40 26 0 0 0 0 0 0 80 80 0 0 372 194 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1844 2831.76 1 -24 nw 64 64 160 104 3726 254 0 0 0 0 0 0 0 0 272 168 360 188 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 7 -39 ndc 80 72 32 32 0 0 0 0 0 0 0 0 0 0 260 162 404 210 0 0 0 0 0 0 0 0
+cap "we_bar" "bl" 54.984
+cap "a_67_n10#" "din" 98.9712
+cap "bl" "a_29_n10#" 41.238
+cap "vdd" "we" 414.98
+cap "we" "din" 467.76
+cap "vdd" "we_bar" 31.71
+cap "vdd" "a_29_n10#" 86.99
+cap "we_bar" "din" 26.832
+cap "a_69_n54#" "din" 98.9712
+cap "a_31_n54#" "din_bar" 98.9712
+cap "bl" "din_bar" 197.942
+cap "a_31_n54#" "bl" 41.238
+cap "vdd" "br" 27.258
+cap "vdd" "din_bar" 311.846
+cap "br" "din" 224.774
+cap "din" "din_bar" 108.648
+cap "vdd" "bl" 27.258
+cap "bl" "din" 26.832
+cap "we" "we_bar" 648.241
+cap "vdd" "din" 400.039
+cap "a_67_n10#" "br" 41.238
+cap "we" "br" 164.952
+cap "br" "we_bar" 54.984
+cap "a_69_n54#" "br" 41.238
+cap "a_29_n10#" "din_bar" 98.9712
+cap "we" "bl" 164.952
+cap "vdd" "a_67_n10#" 56.814
+device mosfet nfet 69 -56 70 -55 2 4 "gnd" "din" 4 0 "gnd" 4 0 "a_69_n54#" 4 0
+device mosfet nfet 31 -56 32 -55 2 4 "gnd" "din_bar" 4 0 "gnd" 4 0 "a_31_n54#" 4 0
+device mosfet nfet 69 -40 70 -39 2 4 "gnd" "we_bar" 4 0 "a_69_n54#" 4 0 "br" 4 0
+device mosfet nfet 51 -42 52 -41 2 4 "gnd" "we" 4 0 "we_bar" 4 0 "gnd" 4 0
+device mosfet nfet 31 -40 32 -39 2 4 "gnd" "we_bar" 4 0 "a_31_n54#" 4 0 "bl" 4 0
+device mosfet nfet 12 -39 13 -38 2 4 "gnd" "din" 4 0 "gnd" 4 0 "din_bar" 4 0
+device mosfet pfet 67 -12 68 -11 2 8 "vdd" "we" 4 0 "br" 8 0 "a_67_n10#" 8 0
+device mosfet pfet 51 -17 52 -16 2 8 "vdd" "we" 4 0 "we_bar" 8 0 "vdd" 8 0
+device mosfet pfet 29 -12 30 -11 2 8 "vdd" "we" 4 0 "bl" 8 0 "a_29_n10#" 8 0
+device mosfet pfet 12 -17 13 -16 2 8 "vdd" "din" 4 0 "vdd" 8 0 "din_bar" 8 0
+device mosfet pfet 67 4 68 5 2 8 "vdd" "din" 4 0 "a_67_n10#" 8 0 "vdd" 8 0
+device mosfet pfet 29 4 30 5 2 8 "vdd" "din_bar" 4 0 "a_29_n10#" 8 0 "vdd" 8 0
+subcap "a_69_n54#" -44.574
+subcap "a_31_n54#" -68.07
+subcap "we_bar" -94.7265
+subcap "din_bar" -63.618

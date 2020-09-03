@@ -1,44 +1,38 @@
-timestamp 1598281576
+timestamp 1599061911
 version 8.2
 tech scmos
 style TSMC0.18um(tsmc18)from:t11b
 scale 1000 1 10
 resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
-node "a_31_n51#" 40 74.622 31 -51 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
-node "out" 21 36.162 29 -18 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 84 50 0 0 0 0 0 0 0 0 0 0
-node "en_bar" 105 190.172 27 -13 p 20 18 40 26 0 0 0 0 0 0 56 54 0 0 128 72 0 0 0 0 0 0 0 0 0 0
+node "a_31_n52#" 40 101.454 31 -52 ndif 40 36 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "out" 21 40.056 29 -18 pdif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
+node "en_bar" 82 100.206 27 -13 p 20 18 40 26 0 0 0 0 0 0 40 40 0 0 168 92 0 0 0 0 0 0 0 0 0 0
+node "en" 200 209.534 29 -38 p 0 0 0 0 0 0 0 0 0 0 104 108 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "in" 131 100.42 12 -41 p 0 0 0 0 0 0 0 0 0 0 68 72 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "a_29_n11#" 47 7.10543e-15 29 -11 pdif 0 0 80 52 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
-node "in" 127 93.762 2 -40 p 0 0 0 0 0 0 0 0 0 0 66 70 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "in_bar" 375 661.092 4 -38 ndif 20 18 40 26 0 0 0 0 0 0 196 194 0 0 160 82 0 0 0 0 0 0 0 0 0 0
-node "en" 397 542.434 29 -37 p 0 0 0 0 0 0 0 0 0 0 206 210 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1058 474.24 50 -9 nw 32 32 40 26 624 100 0 0 0 0 0 0 0 0 80 48 0 0 0 0 0 0 0 0 0 0
-node "vdd" 2188 699.2 23 -24 nw 32 32 40 26 920 132 0 0 0 0 0 0 0 0 88 52 0 0 0 0 0 0 0 0 0 0
-node "vdd" 1058 474.24 -9 -24 nw 32 32 40 26 624 100 0 0 0 0 0 0 0 0 80 48 0 0 0 0 0 0 0 0 0 0
-substrate "gnd" 0 0 -3 -48 poc 60 54 96 96 0 0 0 0 0 0 0 0 0 0 256 152 0 0 0 0 0 0 0 0 0 0
-equiv "gnd" "gnd"
-equiv "gnd" "gnd"
-cap "in_bar" "vdd" 31.71
-cap "in_bar" "vdd" 67.13
-cap "en_bar" "vdd" 31.71
-cap "en_bar" "vdd" 67.13
-cap "out" "a_31_n51#" 41.238
-cap "vdd" "en" 73.788
-cap "a_29_n11#" "vdd" 60.708
-cap "a_29_n11#" "out" 41.238
-cap "en_bar" "in_bar" 7.554
-cap "in" "vdd" 73.788
+node "in_bar" 160 409.825 14 -39 ndif 20 18 40 26 0 0 0 0 0 0 80 80 0 0 364 190 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1421 2200.16 1 -24 nw 48 48 120 78 2898 218 0 0 0 0 0 0 0 0 220 134 268 142 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 7 -39 ndc 60 54 48 48 0 0 0 0 0 0 0 0 0 0 260 154 284 150 0 0 0 0 0 0 0 0
+cap "out" "a_31_n52#" 41.238
+cap "vdd" "a_29_n11#" 91.834
+cap "in_bar" "a_31_n52#" 98.9712
+cap "out" "a_29_n11#" 41.238
+cap "vdd" "in" 73.788
+cap "a_29_n11#" "in_bar" 107.219
+cap "en_bar" "vdd" 167.026
 cap "out" "vdd" 23.364
-device mosfet nfet 31 -53 32 -52 2 4 "gnd" "in_bar" 4 0 "gnd" 4 0 "a_31_n51#" 4 0
-device mosfet nfet 31 -37 32 -36 2 4 "gnd" "en" 4 0 "a_31_n51#" 4 0 "out" 4 0
-device mosfet nfet 2 -38 3 -37 2 4 "gnd" "in" 4 0 "gnd" 4 0 "in_bar" 4 0
-device mosfet nfet 61 -19 62 -18 2 4 "gnd" "en" 4 0 "en_bar" 4 0 "gnd" 4 0
+cap "vdd" "en" 67.13
+cap "vdd" "in_bar" 299.249
+cap "en_bar" "out" 168.388
+cap "out" "in_bar" 173.2
+device mosfet nfet 31 -54 32 -53 2 4 "gnd" "in_bar" 4 0 "gnd" 4 0 "a_31_n52#" 4 0
+device mosfet nfet 31 -38 32 -37 2 4 "gnd" "en" 4 0 "a_31_n52#" 4 0 "out" 4 0
+device mosfet nfet 12 -39 13 -38 2 4 "gnd" "in" 4 0 "gnd" 4 0 "in_bar" 4 0
+device mosfet nfet 51 -34 52 -33 2 4 "gnd" "en" 4 0 "en_bar" 4 0 "gnd" 4 0
+device mosfet pfet 51 -18 52 -17 2 8 "vdd" "en" 4 0 "en_bar" 8 0 "vdd" 8 0
 device mosfet pfet 29 -13 30 -12 2 8 "vdd" "en_bar" 4 0 "out" 8 0 "a_29_n11#" 8 0
-device mosfet pfet 61 -2 62 -1 2 8 "vdd" "en" 4 0 "en_bar" 8 0 "vdd" 8 0
-device mosfet pfet 2 -17 3 -16 2 8 "vdd" "in" 4 0 "vdd" 8 0 "in_bar" 8 0
+device mosfet pfet 12 -17 13 -16 2 8 "vdd" "in" 4 0 "vdd" 8 0 "in_bar" 8 0
 device mosfet pfet 29 4 30 5 2 8 "vdd" "in_bar" 4 0 "a_29_n11#" 8 0 "vdd" 8 0
-subcap "a_31_n51#" -41.238
-subcap "en_bar" -54.984
-subcap "in_bar" -54.984
-subcap "en" -317.548
-subcap "vdd" -193.148
-subcap "vdd" -60.418
+subcap "a_31_n52#" -68.07
+subcap "en_bar" -41.238
+subcap "in_bar" -129.927

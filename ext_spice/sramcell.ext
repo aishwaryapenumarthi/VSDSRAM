@@ -1,0 +1,33 @@
+timestamp 1599116504
+version 8.2
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 10
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "br" 9 167.622 18 -38 ndc 20 18 0 0 0 0 0 0 0 0 0 0 0 0 32 24 44 30 0 0 0 0 0 0 0 0
+node "bl" 9 167.622 8 -38 ndc 20 18 0 0 0 0 0 0 0 0 0 0 0 0 32 24 44 30 0 0 0 0 0 0 0 0
+node "wl" 131 369.262 6 -33 p 0 0 0 0 0 0 0 0 0 0 76 76 0 0 120 68 0 0 0 0 0 0 0 0 0 0
+node "q" 235 516.562 7 -19 ndif 68 46 24 20 0 0 0 0 0 0 104 104 0 0 160 96 76 46 0 0 0 0 0 0 0 0
+node "qb" 235 464.476 5 -21 p 68 46 24 20 0 0 0 0 0 0 104 104 0 0 160 96 76 46 0 0 0 0 0 0 0 0
+node "vdd" 1988 686.28 -7 2 nw 32 32 44 38 903 128 0 0 0 0 0 0 0 0 184 100 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -1 -19 ndif 88 54 32 32 0 0 0 0 0 0 0 0 0 0 208 120 208 120 0 0 0 0 0 0 0 0
+equiv "gnd" "gnd"
+cap "wl" "br" 76.952
+cap "bl" "wl" 76.952
+cap "vdd" "q" 169.634
+cap "bl" "br" 141.268
+cap "qb" "br" 41.238
+cap "bl" "q" 41.238
+cap "qb" "q" 586.275
+cap "qb" "vdd" 268.784
+device mosfet nfet 18 -33 19 -32 2 4 "gnd" "wl" 4 0 "br" 4 0 "qb" 4 0
+device mosfet nfet 8 -33 9 -32 2 4 "gnd" "wl" 4 0 "bl" 4 0 "q" 4 0
+device mosfet nfet 23 -19 24 -18 2 8 "gnd" "q" 4 0 "qb" 8 0 "gnd" 8 0
+device mosfet nfet 5 -19 6 -18 2 8 "gnd" "qb" 4 0 "gnd" 8 0 "q" 8 0
+device mosfet pfet 23 8 24 9 2 4 "vdd" "q" 4 0 "qb" 4 0 "vdd" 4 0
+device mosfet pfet 5 8 6 9 2 4 "vdd" "qb" 4 0 "vdd" 4 0 "q" 4 0
+subcap "br" -129.426
+subcap "bl" -129.426
+subcap "wl" -89.972
+subcap "q" -206.19
+subcap "qb" -253.254

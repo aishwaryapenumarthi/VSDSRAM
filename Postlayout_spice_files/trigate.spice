@@ -1,41 +1,43 @@
 * SPICE3 file created from trigate.ext - technology: scmos
-
-.option scale=0.1u
 .include osu018.lib
+.option scale=0.1u
 
-M1000 vdd en en_bar vdd pfet w=8 l=2
-+  ad=120 pd=78 as=40 ps=26
-M1001 a_31_n51# in_bar gnd gnd nfet w=4 l=2
-+  ad=40 pd=36 as=60 ps=54
-M1002 a_29_n11# en_bar out vdd pfet w=8 l=2
+M1000 in_bar in vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=120 ps=78
+M1001 a_29_n11# en_bar out vdd pfet w=8 l=2
 +  ad=80 pd=52 as=40 ps=26
-M1003 in_bar in gnd gnd nfet w=4 l=2
-+  ad=20 pd=18 as=0 ps=0
-M1004 vdd in_bar a_29_n11# vdd pfet w=8 l=2
+M1002 a_31_n52# in_bar gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=60 ps=54
+M1003 vdd in_bar a_29_n11# vdd pfet w=8 l=2
 +  ad=0 pd=0 as=0 ps=0
-M1005 out en a_31_n51# gnd nfet w=4 l=2
+M1004 vdd en en_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1005 in_bar in gnd gnd nfet w=4 l=2
 +  ad=20 pd=18 as=0 ps=0
-M1006 gnd en en_bar gnd nfet w=4 l=2
+M1006 out en a_31_n52# gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1007 gnd en en_bar gnd nfet w=4 l=2
 +  ad=0 pd=0 as=20 ps=18
-M1007 in_bar in vdd vdd pfet w=8 l=2
-+  ad=40 pd=26 as=0 ps=0
-C0 vdd in_bar 0.10fF
-C1 en vdd 0.07fF
-C2 vdd in 0.07fF
-C3 en_bar in_bar 0.01fF
-C4 vdd a_29_n11# 0.06fF
-C5 vdd out 0.02fF
-C6 out a_29_n11# 0.04fF
-C7 out a_31_n51# 0.04fF
-C8 vdd en_bar 0.10fF
-C9 a_31_n51# gnd 0.03fF
-C10 out gnd 0.04fF
-C11 en_bar gnd 0.14fF
-C12 a_29_n11# gnd 0.00fF
-C13 in gnd 0.09fF
-C14 in_bar gnd 0.61fF
-C15 en gnd 0.22fF
-C16 vdd gnd 1.39fF
+C0 in_bar out 0.17fF
+C1 vdd in_bar 0.30fF
+C2 out en_bar 0.17fF
+C3 in_bar a_31_n52# 0.10fF
+C4 vdd en_bar 0.17fF
+C5 a_29_n11# out 0.04fF
+C6 vdd in 0.07fF
+C7 a_29_n11# vdd 0.09fF
+C8 vdd out 0.02fF
+C9 a_29_n11# in_bar 0.11fF
+C10 en vdd 0.07fF
+C11 a_31_n52# out 0.04fF
+C12 a_31_n52# gnd 0.03fF
+C13 out gnd 0.04fF
+C14 en_bar gnd 0.06fF
+C15 en gnd 0.21fF
+C16 in gnd 0.10fF
+C17 a_29_n11# gnd 0.00fF
+C18 in_bar gnd 0.28fF
+C19 vdd gnd 2.20fF
 
 v2 vdd gnd  dc 1.8V
 v1  in gnd pulse(0 1.8V 0 10ps 10ps 20ns  40ns)
@@ -46,7 +48,6 @@ v3  en gnd pulse(0 1.8V 0 10ps 10ps 50ns 100ns)
 * Control Statements 
 .control
 run
-
 
 plot v(en)+6 v(in)+3 v(out)
 .endc

@@ -1,117 +1,126 @@
 * SPICE3 file created from Integrated.ext - technology: scmos
-
-.option scale=0.1u
 .include osu018.lib
+.option scale=0.1u
 
-M1000 a_116_10# we br vdd pfet w=8 l=2
-+  ad=80 pd=52 as=80 ps=62
-M1001 gnd qb q gnd nfet w=8 l=2
-+  ad=220 pd=178 as=60 ps=44
-M1002 a_n21_n30# din_bar gnd gnd nfet w=4 l=2
-+  ad=40 pd=36 as=0 ps=0
-M1003 qb q gnd gnd nfet w=8 l=2
-+  ad=60 pd=44 as=0 ps=0
-M1004 vdd pre bl vdd pfet w=4 l=2
-+  ad=376 pd=242 as=80 ps=62
-M1005 vdd we we_bar vdd pfet w=8 l=2
+M1000 q wl bl gnd nfet w=4 l=2
++  ad=68 pd=46 as=40 ps=36
+M1001 dout amp_out vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=363 ps=248
+M1002 a_41_3# br gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=228 ps=180
+M1003 amp_out bl gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1004 br pre bl vdd pfet w=4 l=2
++  ad=104 pd=74 as=104 ps=74
+M1005 q qb vdd vdd pfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1006 vdd din_bar a_n67_0# vdd pfet w=8 l=2
++  ad=0 pd=0 as=80 ps=52
+M1007 gnd we we_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1008 br we_bar a_n27_n48# gnd nfet w=4 l=2
++  ad=40 pd=36 as=40 ps=36
+M1009 vdd we we_bar vdd pfet w=8 l=2
 +  ad=0 pd=0 as=40 ps=26
-M1006 vdd amp_out dout vdd pfet w=8 l=2
-+  ad=0 pd=0 as=40 ps=26
-M1007 a_118_n30# din gnd gnd nfet w=4 l=2
-+  ad=40 pd=36 as=0 ps=0
-M1008 a_n23_10# we bl vdd pfet w=8 l=2
-+  ad=80 pd=52 as=0 ps=0
-M1009 din_bar din vdd vdd pfet w=8 l=2
+M1010 din_bar din vdd vdd pfet w=8 l=2
 +  ad=40 pd=26 as=0 ps=0
-M1010 q wl bl gnd nfet w=4 l=2
-+  ad=0 pd=0 as=40 ps=36
-M1011 din_bar din gnd gnd nfet w=4 l=2
-+  ad=20 pd=18 as=0 ps=0
-M1012 br pre bl vdd pfet w=4 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1013 gnd amp_out dout gnd nfet w=4 l=2
-+  ad=0 pd=0 as=20 ps=18
-M1014 vdd pre br vdd pfet w=4 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1015 amp_out bl gnd gnd nfet w=4 l=2
-+  ad=20 pd=18 as=0 ps=0
-M1016 vdd sen a_45_n170# vdd pfet w=12 l=2
-+  ad=0 pd=0 as=136 ps=76
-M1017 bl we_bar a_n21_n30# gnd nfet w=4 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1018 a_45_n187# br gnd gnd nfet w=4 l=2
-+  ad=20 pd=18 as=0 ps=0
-M1019 a_45_n170# a_45_n187# amp_out vdd pfet w=4 l=2
-+  ad=0 pd=0 as=20 ps=18
-M1020 br we_bar a_118_n30# gnd nfet w=4 l=2
+M1011 a_n29_0# we br vdd pfet w=8 l=2
++  ad=80 pd=52 as=0 ps=0
+M1012 a_n65_n48# din_bar gnd gnd nfet w=4 l=2
 +  ad=40 pd=36 as=0 ps=0
-M1021 vdd din a_116_10# vdd pfet w=8 l=2
-+  ad=0 pd=0 as=0 ps=0
-M1022 vdd qb q vdd pfet w=4 l=2
+M1013 vdd sen a_50_6# vdd pfet w=11 l=2
++  ad=0 pd=0 as=115 ps=76
+M1014 a_50_6# a_41_3# a_41_3# vdd pfet w=4 l=2
 +  ad=0 pd=0 as=20 ps=18
-M1023 qb q vdd vdd pfet w=4 l=2
+M1015 dout amp_out gnd gnd nfet w=4 l=2
 +  ad=20 pd=18 as=0 ps=0
-M1024 a_45_n170# a_45_n187# a_45_n187# vdd pfet w=4 l=2
-+  ad=0 pd=0 as=20 ps=18
-M1025 vdd din_bar a_n23_10# vdd pfet w=8 l=2
+M1016 br pre vdd vdd pfet w=4 l=2
 +  ad=0 pd=0 as=0 ps=0
-M1026 gnd we we_bar gnd nfet w=4 l=2
-+  ad=0 pd=0 as=20 ps=18
-M1027 br wl qb gnd nfet w=4 l=2
+M1017 gnd q qb gnd nfet w=8 l=2
++  ad=0 pd=0 as=68 ps=46
+M1018 qb wl br gnd nfet w=4 l=2
 +  ad=0 pd=0 as=0 ps=0
-C0 vdd q 0.17fF
-C1 vdd we 0.28fF
-C2 a_118_n30# br 0.04fF
-C3 vdd a_45_n187# 0.23fF
-C4 vdd qb 0.23fF
-C5 din we_bar 0.01fF
-C6 vdd dout 0.09fF
-C7 a_45_n187# a_45_n170# 0.04fF
-C8 vdd pre 0.16fF
-C9 wl qb 0.35fF
-C10 a_n21_n30# bl 0.04fF
-C11 br a_116_10# 0.04fF
-C12 we din 0.01fF
-C13 wl pre 0.01fF
-C14 br bl 0.14fF
-C15 vdd din_bar 0.15fF
-C16 q qb 0.01fF
-C17 vdd br 0.12fF
-C18 bl a_n23_10# 0.04fF
-C19 vdd a_116_10# 0.06fF
-C20 amp_out bl 0.11fF
-C21 vdd bl 0.12fF
-C22 vdd a_n23_10# 0.06fF
-C23 br we_bar 0.02fF
-C24 vdd amp_out 0.11fF
-C25 br din 0.02fF
-C26 din_bar we 0.01fF
-C27 bl we_bar 0.02fF
-C28 amp_out a_45_n170# 0.04fF
-C29 vdd a_45_n170# 0.14fF
-C30 bl din 0.02fF
-C31 q bl 0.04fF
-C32 qb br 0.04fF
-C33 vdd we_bar 0.09fF
-C34 vdd sen 0.05fF
-C35 vdd din 0.13fF
-C36 a_45_n187# gnd 0.03fF
-C37 dout gnd 0.09fF
-C38 amp_out gnd 0.07fF
-C39 a_45_n170# gnd 0.00fF
-C40 q gnd 0.71fF
-C41 qb gnd 0.71fF
-C42 wl gnd 0.97fF
-C43 a_118_n30# gnd 0.07fF
-C44 a_n21_n30# gnd 0.01fF
-C45 br gnd 0.12fF
-C46 bl gnd 0.04fF
-C47 a_116_10# gnd 0.00fF
-C48 we_bar gnd 0.05fF
-C49 a_n23_10# gnd 0.00fF
-C50 din gnd 2.53fF
-C51 din_bar gnd 0.46fF
-C52 vdd gnd 5.13fF
+M1019 vdd din a_n29_0# vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1020 a_50_6# a_41_3# amp_out vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1021 vdd q qb vdd pfet w=4 l=2
++  ad=0 pd=0 as=24 ps=20
+M1022 bl we_bar a_n65_n48# gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1023 a_n27_n48# din gnd gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1024 bl pre vdd vdd pfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1025 din_bar din gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1026 a_n67_0# we bl vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1027 q qb gnd gnd nfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 br a_n29_0# 0.04fF
+C1 bl amp_out 0.05fF
+C2 a_n27_n48# br 0.04fF
+C3 a_n67_0# din_bar 0.10fF
+C4 a_n65_n48# din_bar 0.10fF
+C5 vdd we 0.41fF
+C6 amp_out a_50_6# 0.01fF
+C7 vdd bl 0.09fF
+C8 din din_bar 0.11fF
+C9 br din 0.28fF
+C10 vdd a_50_6# 0.08fF
+C11 a_41_3# a_50_6# 0.04fF
+C12 vdd pre 0.35fF
+C13 bl wl 0.08fF
+C14 we_bar din 0.03fF
+C15 vdd a_n29_0# 0.06fF
+C16 bl we 0.31fF
+C17 vdd a_n67_0# 0.09fF
+C18 br we_bar 0.05fF
+C19 vdd din 0.40fF
+C20 qb br 0.04fF
+C21 vdd dout 0.03fF
+C22 vdd din_bar 0.31fF
+C23 bl a_n67_0# 0.04fF
+C24 q qb 0.59fF
+C25 vdd br 0.09fF
+C26 bl a_n65_n48# 0.04fF
+C27 vdd sen 0.05fF
+C28 we din 0.47fF
+C29 bl din 0.11fF
+C30 q vdd 0.17fF
+C31 vdd we_bar 0.03fF
+C32 br wl 0.08fF
+C33 bl din_bar 0.23fF
+C34 qb vdd 0.27fF
+C35 vdd amp_out 0.09fF
+C36 amp_out a_41_3# 0.12fF
+C37 br we 0.16fF
+C38 bl br 0.49fF
+C39 a_n29_0# din 0.10fF
+C40 a_n27_n48# din 0.10fF
+C41 vdd a_41_3# 0.20fF
+C42 we_bar we 0.28fF
+C43 q bl 0.04fF
+C44 bl we_bar 0.06fF
+C45 bl gnd 0.32fF
+C46 a_n27_n48# gnd 0.03fF
+C47 a_n65_n48# gnd 0.03fF
+C48 dout gnd 0.04fF
+C49 br gnd 0.10fF
+C50 we_bar gnd 0.36fF
+C51 amp_out gnd 0.22fF
+C52 a_41_3# gnd 0.05fF
+C53 wl gnd 0.31fF
+C54 we gnd 0.29fF
+C55 a_n29_0# gnd 0.00fF
+C56 a_n67_0# gnd 0.00fF
+C57 din gnd 0.42fF
+C58 din_bar gnd 0.33fF
+C59 q gnd 0.52fF
+C60 qb gnd 0.46fF
+C61 vdd gnd 5.44fF
+
 
 *voltages
 
