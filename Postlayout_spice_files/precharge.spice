@@ -4,17 +4,11 @@
 .include osu018.lib
 
 M1000 vdd pre br vdd pfet w=4 l=2
-+  ad=40 pd=36 as=52 ps=42
-M1001 vdd pre bl vdd pfet w=4 l=2
-+  ad=0 pd=0 as=52 ps=42
-M1002 br pre bl vdd pfet w=4 l=2
++  ad=64 pd=48 as=64 ps=48
+M1001 bl pre br vdd pfet w=4 l=2
++  ad=64 pd=48 as=0 ps=0
+M1002 vdd pre bl vdd pfet w=4 l=2
 +  ad=0 pd=0 as=0 ps=0
-C0 vdd br 0.09fF
-C1 vdd pre 0.20fF
-C2 vdd bl 0.09fF
-C3 br w_n1073741817_n1073741817# 0.00fF
-C4 bl w_n1073741817_n1073741817# 0.00fF
-C5 vdd w_n1073741817_n1073741817# 1.09fF
 
 v1  vdd gnd 1.8V
 v2  pre gnd pulse(0 1.8V 50ps 10ps 10ps 40ns 80ns)

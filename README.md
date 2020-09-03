@@ -46,7 +46,7 @@ WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of tw
 
 <img align="center" width="900"  src="/Prelayout_Simulations/SNM_CURVE.png">
 
-Calculated  value for above curve is  0.59 .
+Calculated  SNM value for above curve is  0.59 .
 
 ### **2. Read mode :**
 WL=1 ==> Aceess transistors will be on.
