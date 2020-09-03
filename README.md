@@ -140,12 +140,12 @@ $ cd SRAM/Postlayout_spice_files
 #### To Run Simulation 
 **Example :** To run simulations of trigate circuit , type the below command 
 ```
-$ ngspice tri_gate.cir.out
+$ ngspice tristate.cir.out
 ```
 Which gives you following waveforms :
 
-<img align="center" width="900"  src="/Prelayout_Simulations/trigate_inputs.png">
-<img align="center" width="900"  src="/Prelayout_Simulations/trigate_output.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/tristate_inputs.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/tristate_output.png">
 
 ### Layout using Magic
 
@@ -225,9 +225,9 @@ For postlayout simulated waveform click [here](/Postlayout_Simulations/sense.png
 
 #### Trigate 
 
-<img align="center" width="900"  src="/LAYOUT/trigate.png">
+<img align="center" width="900"  src="/LAYOUT/tristate.png">
 
-For postlayout simulated waveform click [here](/Postlayout_Simulations/trigate.png)
+For postlayout simulated waveform click [here](/Postlayout_Simulations/tristate.png)
 
 #### Write Driver
 
