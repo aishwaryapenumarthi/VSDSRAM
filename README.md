@@ -36,7 +36,7 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
  
 ## 6T-CELL 
 
-<img align="center" width="1000"  src="/Circuits/6tsramcell.png">
+<img align="center" width="900"  src="/Circuits/6tsramcell.png">
 
 ## Modes of operation of sram 
 
@@ -44,7 +44,7 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
 WL=0 ==> Access transistors M1,M6 will be off . The circuits preserves one of two stable operating points . Therefore, data is held .
 #### SNM curve 
 
-<img align="center" width="1000"  src="/Prelayout_Simulations/SNM_CURVE.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/SNM_CURVE.png">
 
 Calculated  value for above curve is  0.59 .
 
@@ -58,22 +58,22 @@ Similarly read '0' operation is done .
 
 #### Precharge circuit :
 
-<img align="center" width="1000"  src="/Circuits/precharge.png">
+<img align="center" width="900"  src="/Circuits/precharge.png">
 
 ##### Simulated waveforms :
 
-<img align="center" width="1000"  src="/Prelayout_Simulations/precharge_circuit(pre,bl,br).png">
+<img align="center" width="900"  src="/Prelayout_Simulations/precharge_circuit(pre,bl,br).png">
 
 #### Sense amplifier :  
 
 Here sen is active-0 read enable signal .
 
-<img align="center" width="1000"  src="/Circuits/sense_amp.png">
+<img align="center" width="900"  src="/Circuits/sense_amp.png">
 
 ##### Simulated waveforms :
 
-<img align="center" width="1000"  src="/Prelayout_Simulations/sense_inputs.png">
-<img align="center" width="1000"  src="/Prelayout_Simulations/sense_out.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/sense_inputs.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/sense_out.png">
 
 ### **3. Write mode :**
 WL=1 ==> Access transistors will be on .
@@ -86,22 +86,22 @@ When Q less than Vth of M1 then M1 gets off. Qb becomes high as PMOS(M2) connect
 
 Here we is active-0 write enable signal .
 
-<img align="center" width="1000"  src="/Circuits/writedrivers_schematic.png">
+<img align="center" width="900"  src="/Circuits/writedrivers_schematic.png">
 
 ##### Simulated waveforms:
 
-<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_inputs.png">
-<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_out_bl.png">
-<img align="center" width="1000"  src="/Prelayout_Simulations/writedriver_output_br.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/writedriver_inputs.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/writedriver_out_bl.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/writedriver_output_br.png">
 
 
 ## Block diagram for for 1-bit SRAM
 
-<img align="center" width="1000"  src="/Circuits/block diagram.JPG">
+<img align="center" width="900"  src="/Circuits/block diagram.JPG">
 
 ### Simulated waveforms : 
-<img align="center" width="1000"  src="/Prelayout_Simulations/Integrated_circuit_in_out.png">
-<img align="center" width="1000"  src="/Prelayout_Simulations/bl_br_integrated_circuit.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/Integrated_circuit_in_out.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/bl_br_integrated_circuit.png">
 
 
 
@@ -144,8 +144,8 @@ $ ngspice tri_gate.cir.out
 ```
 Which gives you following waveforms :
 
-<img align="center" width="1000"  src="/Prelayout_Simulations/trigate_inputs.png">
-<img align="center" width="1000"  src="/Prelayout_Simulations/trigate_output.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/trigate_inputs.png">
+<img align="center" width="900"  src="/Prelayout_Simulations/trigate_output.png">
 
 ### Layout using Magic
 
@@ -205,45 +205,45 @@ sudo apt-get install qflow
 
 #### 6T SRAM CELL
 
-<img align="center" width="1000"  src="/LAYOUT/6tsramcell.png">
+<img align="center" width="900"  src="/LAYOUT/sramcell.png">
 
-For postlayout simulated waveform (read operation) click [here](/Postlayout_Simulations/6tsramcell_read.png)
+For postlayout simulated waveform (read operation) click [here](/Postlayout_Simulations/sramcell_read.png)
 
-For postlayout simulated waveform (write operation) click [here](/Postlayout_Simulations/6tsramcell_write.png)
+For postlayout simulated waveform (write operation) click [here](/Postlayout_Simulations/sramcell_write.png)
 
 #### Precharge 
 
-<img align="center" width="1000"  src="/LAYOUT/precharge.png">
+<img align="center" width="900"  src="/LAYOUT/precharge.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/precharge.png)
 
 #### Sense 
 
-<img align="center" width="1000"  src="/LAYOUT/sense.png">
+<img align="center" width="900"  src="/LAYOUT/sense.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/sense.png)
 
 #### Trigate 
 
-<img align="center" width="1000"  src="/LAYOUT/trigate.png">
+<img align="center" width="900"  src="/LAYOUT/trigate.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/trigate.png)
 
 #### Write Driver
 
-<img align="center" width="1000"  src="/LAYOUT/writedriver.png">
+<img align="center" width="900"  src="/LAYOUT/writedriver.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/writedriver.png)
 
 #### D-FLIP FLOP
 
-<img align="center" width="1000"  src="/LAYOUT/dflipflop.png">
+<img align="center" width="900"  src="/LAYOUT/dflipflop.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/dflipflop.png)
 
 #### Integrated circuit
 
-<img align="center" width="1000"  src="/LAYOUT/Integrated.png">
+<img align="center" width="900"  src="/LAYOUT/Integrated.png">
 
 For postlayout simulated waveform click [here](/Postlayout_Simulations/Integrated.png)
  
