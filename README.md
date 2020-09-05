@@ -1,12 +1,6 @@
 # SRAM
 
-This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM compiler .
-
-
-# Table of contents
-
-- [SRAM](#sram)
-- [Table of contents](#table-of-contents)
+  - [Design of SRAM](#design-of-sram)
   - [Desired Specifications](#desired-specifications)
   - [6T-CELL](#6t-cell)
   - [Modes of operation of sram](#modes-of-operation-of-sram)
@@ -26,6 +20,10 @@ This reposistory will give brief idea on 1024 X 32 SRAM IP Design using OpenRAM 
   - [Author](#author)
   - [Acknowledgements](#acknowledgements)
   - [Contact Information](#contact-information)
+
+## Design of SRAM
+The aim of this reposistory is to design 1024 X 32 SRAM IP using OpenRAM compiler . OpenRAM is a open source memory compiler which provided a platform to implement and test new memory designs. Library cells required for SRAM design using OpenRAM compiler are designed and simulated .
+  
 ## Desired Specifications
 
  * Size : 4KB (1024 x 32)
@@ -206,47 +204,51 @@ sudo apt-get install qflow
 #### 6T SRAM CELL
 
 <img align="center" width="900"  src="/LAYOUT/sramcell.png">
-
-For postlayout simulated waveform (read operation) click [here](/Postlayout_Simulations/sramcell_read.png)
-
-For postlayout simulated waveform (write operation) click [here](/Postlayout_Simulations/sramcell_write.png)
+Postlayout simulated waveform (read operation) :
+<img align="center" width="900"  src="/Postlayout_Simulations/sramcell_read.png">
+Postlayout simulated waveform (write operation) :
+<img align="center" width="900"  src="/Postlayout_Simulations/sramcell_read.png">
 
 #### Precharge 
 
 <img align="center" width="900"  src="/LAYOUT/precharge.png">
 
-For postlayout simulated waveform click [here](/Postlayout_Simulations/precharge.png)
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/precharge.png">
 
 #### Sense 
 
 <img align="center" width="900"  src="/LAYOUT/sense.png">
 
-For postlayout simulated waveform click [here](/Postlayout_Simulations/sense.png)
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/sense.png">
+
 
 #### Trigate 
 
 <img align="center" width="900"  src="/LAYOUT/tristate.png">
-
-For postlayout simulated waveform click [here](/Postlayout_Simulations/tristate.png)
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/tristate.png">
 
 #### Write Driver
 
 <img align="center" width="900"  src="/LAYOUT/writedriver.png">
 
-For postlayout simulated waveform click [here](/Postlayout_Simulations/writedriver.png)
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/writedriver.png">
 
 #### D-FLIP FLOP
 
 <img align="center" width="900"  src="/LAYOUT/dflipflop.png">
-
-For postlayout simulated waveform click [here](/Postlayout_Simulations/dflipflop.png)
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/dflipflop.png">
 
 #### Integrated circuit
 
 <img align="center" width="900"  src="/LAYOUT/Integrated.png">
+Postlayout simulated waveform :
+<img align="center" width="900"  src="/Postlayout_Simulations/Integrated.png">
 
-For postlayout simulated waveform click [here](/Postlayout_Simulations/Integrated.png)
- 
 ## Future work
 
 The setup script and technology directory for osu018  has to be created in OpenRAM compiler.
@@ -257,8 +259,9 @@ The setup script and technology directory for osu018  has to be created in OpenR
  
 ## Acknowledgements
 
-  * Kunal Ghosh Director VSD Corp.Pvt.ltd
-  * Philipp Guhring Software Architect at LibreSilicon Association
+  * Kunal Ghosh , Director of VSD Corp.Pvt.ltd
+  * Philipp Guhring , Software Architect at LibreSilicon Association
+  * Tim Edwards , Senior Vice President of Analog and Design at eFabless corporstion
   
 ## Contact Information 
 
