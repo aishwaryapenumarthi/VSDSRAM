@@ -259,7 +259,7 @@ The setup script and technology directory for osu018  has to be created in OpenR
  
 ## Acknowledgements
 
-  * Kunal Ghosh , Director of VSD Corp.Pvt.ltd
+  * Kunal Ghosh , Co-founder of VSD Corp.Pvt.ltd
   * Philipp Guhring , Software Architect at LibreSilicon Association
   * Tim Edwards , Senior Vice President of Analog and Design at eFabless corporstion
   
