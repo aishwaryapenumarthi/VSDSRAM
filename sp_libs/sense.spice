@@ -1,0 +1,34 @@
+* SPICE3 file created from sense.ext - technology: scmos
+
+.option scale=0.1u
+
+M1000 dout amp_out gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=60 ps=54
+M1001 a_n17_n10# a_n26_n13# a_n26_n13# vdd pfet w=4 l=2
++  ad=115 pd=76 as=20 ps=18
+M1002 amp_out bl gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1003 a_n26_n13# br gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1004 vdd sen a_n17_n10# vdd pfet w=11 l=2
++  ad=95 pd=58 as=0 ps=0
+M1005 a_n17_n10# a_n26_n13# amp_out vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1006 dout amp_out vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+C0 vdd sen 0.05fF
+C1 amp_out bl 0.05fF
+C2 amp_out vdd 0.09fF
+C3 amp_out a_n26_n13# 0.12fF
+C4 bl br 0.02fF
+C5 vdd dout 0.03fF
+C6 a_n17_n10# vdd 0.08fF
+C7 a_n26_n13# a_n17_n10# 0.04fF
+C8 amp_out a_n17_n10# 0.01fF
+C9 a_n26_n13# vdd 0.20fF
+C10 bl gnd 0.17fF
+C11 br gnd 0.12fF
+C12 dout gnd 0.04fF
+C13 amp_out gnd 0.22fF
+C14 a_n26_n13# gnd 0.09fF
+C15 vdd gnd 1.90fF

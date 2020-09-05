@@ -1,0 +1,66 @@
+* SPICE3 file created from new_writedriver.ext - technology: scmos
+
+.option scale=0.1u
+
+M1000 din_bar din vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=160 ps=104
+M1001 br we_bar a_69_n54# gnd nfet w=4 l=2
++  ad=20 pd=18 as=40 ps=36
+M1002 a_31_n54# din_bar gnd gnd nfet w=4 l=2
++  ad=40 pd=36 as=80 ps=72
+M1003 a_29_n10# we bl vdd pfet w=8 l=2
++  ad=80 pd=52 as=40 ps=26
+M1004 gnd we we_bar gnd nfet w=4 l=2
++  ad=0 pd=0 as=20 ps=18
+M1005 bl we_bar a_31_n54# gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 vdd we we_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1007 vdd din_bar a_29_n10# vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 vdd din a_67_n10# vdd pfet w=8 l=2
++  ad=0 pd=0 as=80 ps=52
+M1009 a_67_n10# we br vdd pfet w=8 l=2
++  ad=0 pd=0 as=40 ps=26
+M1010 a_69_n54# din gnd gnd nfet w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 din_bar din gnd gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+C0 a_69_n54# din 0.10fF
+C1 vdd br 0.03fF
+C2 din din_bar 0.11fF
+C3 a_29_n10# vdd 0.09fF
+C4 din vdd 0.40fF
+C5 bl a_31_n54# 0.04fF
+C6 we bl 0.16fF
+C7 din_bar vdd 0.31fF
+C8 we we_bar 0.65fF
+C9 a_67_n10# br 0.04fF
+C10 bl we_bar 0.05fF
+C11 we br 0.16fF
+C12 din a_67_n10# 0.10fF
+C13 din we 0.47fF
+C14 a_29_n10# bl 0.04fF
+C15 din_bar a_31_n54# 0.10fF
+C16 we_bar br 0.05fF
+C17 din bl 0.03fF
+C18 vdd a_67_n10# 0.06fF
+C19 din_bar bl 0.20fF
+C20 vdd we 0.41fF
+C21 din we_bar 0.03fF
+C22 din br 0.22fF
+C23 vdd bl 0.03fF
+C24 a_69_n54# br 0.04fF
+C25 vdd we_bar 0.03fF
+C26 a_29_n10# din_bar 0.10fF
+C27 a_69_n54# gnd 0.03fF
+C28 a_31_n54# gnd 0.03fF
+C29 br gnd 0.04fF
+C30 we_bar gnd 0.32fF
+C31 bl gnd 0.04fF
+C32 we gnd 0.26fF
+C33 a_67_n10# gnd 0.00fF
+C34 a_29_n10# gnd 0.00fF
+C35 din gnd 0.38fF
+C36 din_bar gnd 0.29fF
+C37 vdd gnd 2.83fF
